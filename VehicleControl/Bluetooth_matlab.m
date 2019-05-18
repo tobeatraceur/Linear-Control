@@ -12,6 +12,7 @@ function Bluetooth_matlab()
   
   s.BytesAvailableFcn =@ReceiveCallback;       % 定义中断响应函数对象
 
+
 while(1)
     x=input('input:','s');
     command = string(x);

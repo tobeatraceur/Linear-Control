@@ -1,4 +1,6 @@
 function [output] = read_data(MyClient)
+    % Output format: list of map, each map has these key:
+    %'SubjectName', 'SegmentName', 'GlobalTranslation', 'GlobalQuaternion', 'GlobalEuler'
 
     output = []
 

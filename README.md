@@ -1,15 +1,18 @@
 # Linear-Control
 
-- Data collecting in * ViconData\ *
+- Matlab control and monitor in * Matlab\ *
 - Matlab stimulation in * Stimulation\ *
-- Controlling related programs in * VehicleControl\ *
+- Controlling related programs in * VehicleControl\ * (to be removed)
+- Data collected in * ViconData\ *
 
 ### TODO 05-22
 * [ ] 结合文献实现单个小车跟随
 * [ ] 结合文献实现小车碰撞避免（多车问题）
 * [ ] 解决控制中产生的误差（速度离散，滞后）
 * [ ] 对VICON输出的滤波
-* [ ] 蓝牙的多连接测试
+* 蓝牙
+    * [ ] 蓝牙控制并测速
+    * [ ] 蓝牙的多连接测试
 
 
 ### TODO 05-15
