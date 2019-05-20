@@ -37,6 +37,7 @@ for k=1:length(t)
     v_1 = v + L*w;
     v_2 = v - L*w;
 end
+
 %subplot(4,1,1)
 
 %plot(x)
