@@ -18,14 +18,16 @@ classdef Car
              end
              speed(speed > obj.MAX_SPEED) = obj.MAX_SPEED;
              speed(speed < -obj.MAX_SPEED) = -obj.MAX_SPEED;
-             command = sprintf('{333%+03d%+03d}', uint8(speed));
+             command = sprintf('{333%+03d%+03d}', round(speed));
              disp(['command: ', command]);
              fprintf(obj.bluetooth, command);
          end
+         
+         function stop(obj)
+             obj.set_speed([0, 0]);
+         end
 
          function delete(obj)
-             obj.set_speed([0, 0]);
-             pause(5);
              fclose(obj.bluetooth);
              delete(obj.bluetooth);
              clear obj.bluetooth;

@@ -25,17 +25,14 @@ classdef VData
             obj.MyClient = Client();
 
             % Connect to a server
-            fprintf( 'Connecting to %s ...', HostName );
             while ~obj.MyClient.IsConnected().Connected
                 obj.MyClient.Connect( HostName );
-                fprintf( '.' );
+                % fprintf( '.' );
             end
             fprintf( '\n' );
 
             % Enable some different data types
             obj.MyClient.EnableSegmentData();
-            fprintf( 'Segment Data Enabled: %s\n', ...
-                AdaptBool( obj.MyClient.IsSegmentDataEnabled().Enabled ) );
 
             % Set the streaming mode
             obj.MyClient.SetStreamMode( StreamMode.ClientPull );
@@ -50,14 +47,14 @@ classdef VData
             % Output format: list of map, each map has these key:
             %'SubjectName', 'SegmentName', 'GlobalTranslation', 'GlobalQuaternion', 'GlobalEuler'
 
-            output = []
+            output = containers.Map;
 
             % Get a frame
-            fprintf( 'Waiting for new frame...' );
+            % fprintf( 'Waiting for new frame...' );
             while obj.MyClient.GetFrame().Result.Value ~= Result.Success
-                fprintf( '.' );
-            end% while
-            fprintf( '\n' );  
+                % fprintf( '.' );
+            end
+            % fprintf( '\n' );  
 
             % Count the number of subjects
             SubjectCount = obj.MyClient.GetSubjectCount().SubjectCount;
@@ -94,7 +91,7 @@ classdef VData
                         obj.MyClient.GetSegmentGlobalRotationEulerXYZ( SubjectName, SegmentName );
                     segmentData('GlobalEuler') = Output_GetSegmentGlobalRotationEulerXYZ;
 
-                    output = [output, segmentData];
+                    output(segmentData('SegmentName')) = segmentData;
 
                 end% SegmentIndex
 
