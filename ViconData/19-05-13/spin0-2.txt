@@ -1,0 +1,1335 @@
+
+time: 63725050308.470001
+Global Translation: (0, 0, 0) True
+Global Rotation Quaternion: (0, 0, 0, 0) True
+Global Rotation EulerXYZ: (0, 0, 0) True
+
+time: 63725050308.474998
+Global Translation: (-873.8, 913.865, 94.6014) False
+Global Rotation Quaternion: (0.00237741, 0.00675824, -0.140825, 0.990009) False
+Global Rotation EulerXYZ: (0.00661135, 0.0127122, -0.282639) False
+
+time: 63725050308.486008
+Global Translation: (-873.682, 913.857, 94.6102) False
+Global Rotation Quaternion: (0.00192425, 0.00672281, -0.142244, 0.989807) False
+Global Rotation EulerXYZ: (0.00572233, 0.0127615, -0.2855) False
+
+time: 63725050308.496002
+Global Translation: (-873.57, 913.83, 94.6578) False
+Global Rotation Quaternion: (0.00211487, 0.00664523, -0.143968, 0.989558) False
+Global Rotation EulerXYZ: (0.00609949, 0.0125431, -0.288985) False
+
+time: 63725050308.505005
+Global Translation: (-873.447, 913.885, 94.606) False
+Global Rotation Quaternion: (0.00214294, 0.00694049, -0.145623, 0.989314) False
+Global Rotation EulerXYZ: (0.00626205, 0.0131089, -0.292333) False
+
+time: 63725050308.515007
+Global Translation: (-873.318, 913.917, 94.6341) False
+Global Rotation Quaternion: (0.00204055, 0.00730888, -0.146803, 0.989137) False
+Global Rotation EulerXYZ: (0.00618334, 0.0138603, -0.294723) False
+
+time: 63725050308.524994
+Global Translation: (-873.214, 913.96, 94.683) False
+Global Rotation Quaternion: (0.00181696, 0.00755568, -0.147805, 0.988986) False
+Global Rotation EulerXYZ: (0.00582806, 0.0144083, -0.296747) False
+
+time: 63725050308.535004
+Global Translation: (-873.096, 914.023, 94.6813) False
+Global Rotation Quaternion: (0.00201992, 0.00748953, -0.14941, 0.988745) False
+Global Rotation EulerXYZ: (0.00623306, 0.0142074, -0.299997) False
+
+time: 63725050308.544998
+Global Translation: (-872.936, 914.026, 94.6608) False
+Global Rotation Quaternion: (0.00210392, 0.00739782, -0.151388, 0.988444) False
+Global Rotation EulerXYZ: (0.00639978, 0.0139881, -0.303999) False
+
+time: 63725050308.555008
+Global Translation: (-872.771, 914.141, 94.5521) False
+Global Rotation Quaternion: (0.00203634, 0.0076742, -0.153061, 0.988185) False
+Global Rotation EulerXYZ: (0.00637452, 0.0145442, -0.307387) False
+
+time: 63725050308.563995
+Global Translation: (-872.592, 914.286, 94.5707) False
+Global Rotation Quaternion: (0.00210969, 0.00748552, -0.154556, 0.987953) False
+Global Rotation EulerXYZ: (0.00648311, 0.014139, -0.310411) False
+
+time: 63725050308.574997
+Global Translation: (-872.473, 914.405, 94.5662) False
+Global Rotation Quaternion: (0.00176772, 0.00772591, -0.15592, 0.987738) False
+Global Rotation EulerXYZ: (0.005902, 0.0147116, -0.313171) False
+
+time: 63725050308.584999
+Global Translation: (-872.351, 914.445, 94.581) False
+Global Rotation Quaternion: (0.00190304, 0.00763858, -0.157615, 0.987469) False
+Global Rotation EulerXYZ: (0.006167, 0.0144863, -0.316605) False
+
+time: 63725050308.595016
+Global Translation: (-872.255, 914.41, 94.6042) False
+Global Rotation Quaternion: (0.00210882, 0.00785603, -0.15936, 0.987187) False
+Global Rotation EulerXYZ: (0.00666826, 0.0148392, -0.320145) False
+
+time: 63725050308.605003
+Global Translation: (-872.119, 914.454, 94.5606) False
+Global Rotation Quaternion: (0.00208326, 0.00855593, -0.160744, 0.986957) False
+Global Rotation EulerXYZ: (0.00686376, 0.0162196, -0.322957) False
+
+time: 63725050308.614990
+Global Translation: (-871.999, 914.513, 94.6083) False
+Global Rotation Quaternion: (0.00174227, 0.00835945, -0.16204, 0.986747) False
+Global Rotation EulerXYZ: (0.0061483, 0.0159334, -0.325576) False
+
+time: 63725050308.624008
+Global Translation: (-871.884, 914.617, 94.6086) False
+Global Rotation Quaternion: (0.00154655, 0.00810419, -0.163739, 0.986469) False
+Global Rotation EulerXYZ: (0.0057059, 0.0154832, -0.329014) False
+
+time: 63725050308.634995
+Global Translation: (-871.721, 914.713, 94.5557) False
+Global Rotation Quaternion: (0.00178878, 0.00760726, -0.165891, 0.986113) False
+Global Rotation EulerXYZ: (0.0060525, 0.0144102, -0.333377) False
+
+time: 63725050308.645004
+Global Translation: (-871.548, 914.813, 94.4509) False
+Global Rotation Quaternion: (0.00173485, 0.00773141, -0.167698, 0.985807) False
+Global Rotation EulerXYZ: (0.00601422, 0.014662, -0.337042) False
+
+time: 63725050308.654999
+Global Translation: (-871.619, 913.301, 93.6536) False
+Global Rotation Quaternion: (-0.0163748, 0.0118217, -0.170605, 0.985133) False
+Global Rotation EulerXYZ: (-0.0282445, 0.0288831, -0.342549) False
+
+time: 63725050308.665009
+Global Translation: (-871.545, 913.391, 93.6871) False
+Global Rotation Quaternion: (-0.0165167, 0.0122273, -0.171717, 0.984932) False
+Global Rotation EulerXYZ: (-0.0283527, 0.0297629, -0.344796) False
+
+time: 63725050308.675003
+Global Translation: (-871.399, 913.472, 93.7303) False
+Global Rotation Quaternion: (-0.0164856, 0.0118682, -0.174055, 0.984526) False
+Global Rotation EulerXYZ: (-0.0283454, 0.029112, -0.349552) False
+
+time: 63725050308.684006
+Global Translation: (-871.209, 913.567, 93.6844) False
+Global Rotation Quaternion: (-0.0169618, 0.0120528, -0.176084, 0.984155) False
+Global Rotation EulerXYZ: (-0.0291584, 0.0297014, -0.353659) False
+
+time: 63725050308.694000
+Global Translation: (-870.98, 913.679, 93.6321) False
+Global Rotation Quaternion: (-0.0172588, 0.0117661, -0.177976, 0.983813) False
+Global Rotation EulerXYZ: (-0.0297879, 0.0292987, -0.3575) False
+
+time: 63725050308.705002
+Global Translation: (-870.86, 913.784, 93.6726) False
+Global Rotation Quaternion: (-0.0173086, 0.0121716, -0.17962, 0.983508) False
+Global Rotation EulerXYZ: (-0.0296917, 0.0301642, -0.360835) False
+
+time: 63725050308.713997
+Global Translation: (-870.758, 913.862, 93.621) False
+Global Rotation Quaternion: (-0.017839, 0.0124786, -0.181763, 0.983101) False
+Global Rotation EulerXYZ: (-0.0305582, 0.0310254, -0.365171) False
+
+time: 63725050308.723999
+Global Translation: (-870.61, 913.941, 93.6512) False
+Global Rotation Quaternion: (-0.0176569, 0.0119822, -0.183768, 0.982738) False
+Global Rotation EulerXYZ: (-0.0303187, 0.0300449, -0.369266) False
+
+time: 63725050308.735001
+Global Translation: (-869.851, 913.551, 97.7292) False
+Global Rotation Quaternion: (0.0104682, -0.0155499, -0.192528, 0.981112) False
+Global Rotation EulerXYZ: (0.0145626, -0.0345501, -0.387294) False
+
+time: 63725050308.744003
+Global Translation: (-869.681, 913.644, 97.7038) False
+Global Rotation Quaternion: (0.0106683, -0.0154601, -0.194169, 0.980788) False
+Global Rotation EulerXYZ: (0.0149323, -0.034476, -0.390632) False
+
+time: 63725050308.753998
+Global Translation: (-869.55, 913.752, 97.6766) False
+Global Rotation Quaternion: (0.0108266, -0.0154498, -0.195904, 0.980442) False
+Global Rotation EulerXYZ: (0.0151861, -0.034544, -0.394167) False
+
+time: 63725050308.764992
+Global Translation: (-869.424, 913.825, 97.6959) False
+Global Rotation Quaternion: (0.0106935, -0.0152392, -0.197447, 0.980137) False
+Global Rotation EulerXYZ: (0.0149536, -0.0341024, -0.39732) False
+
+time: 63725050308.774994
+Global Translation: (-869.262, 913.911, 97.6579) False
+Global Rotation Quaternion: (0.0107983, -0.0149819, -0.199158, 0.979793) False
+Global Rotation EulerXYZ: (0.0152018, -0.0336658, -0.400812) False
+
+time: 63725050308.784996
+Global Translation: (-869.106, 914.028, 97.6005) False
+Global Rotation Quaternion: (0.0106677, -0.0149111, -0.20095, 0.97943) False
+Global Rotation EulerXYZ: (0.0149128, -0.0335024, -0.404474) False
+
+time: 63725050308.796005
+Global Translation: (-868.966, 914.182, 97.5882) False
+Global Rotation Quaternion: (0.0105136, -0.0151042, -0.202448, 0.97912) False
+Global Rotation EulerXYZ: (0.0144813, -0.033841, -0.407538) False
+
+time: 63725050308.805000
+Global Translation: (-868.829, 914.328, 97.6045) False
+Global Rotation Quaternion: (0.0103512, -0.0153105, -0.204147, 0.978766) False
+Global Rotation EulerXYZ: (0.0140202, -0.0342038, -0.411016) False
+
+time: 63725050308.815002
+Global Translation: (-868.727, 914.386, 97.6063) False
+Global Rotation Quaternion: (0.0105595, -0.0152158, -0.206058, 0.978365) False
+Global Rotation EulerXYZ: (0.0144003, -0.0341316, -0.414916) False
+
+time: 63725050308.825005
+Global Translation: (-868.602, 914.401, 97.6218) False
+Global Rotation Quaternion: (0.0106291, -0.0147865, -0.207584, 0.978048) False
+Global Rotation EulerXYZ: (0.0146614, -0.0333428, -0.418035) False
+
+time: 63725050308.834000
+Global Translation: (-868.471, 914.454, 97.6098) False
+Global Rotation Quaternion: (0.0106277, -0.0146526, -0.208846, 0.977781) False
+Global Rotation EulerXYZ: (0.0146715, -0.0330993, -0.420617) False
+
+time: 63725050308.845001
+Global Translation: (-868.368, 914.507, 97.642) False
+Global Rotation Quaternion: (0.010456, -0.0146795, -0.210273, 0.977477) False
+Global Rotation EulerXYZ: (0.0142759, -0.033101, -0.423541) False
+
+time: 63725050308.854996
+Global Translation: (-868.238, 914.569, 97.6565) False
+Global Rotation Quaternion: (0.0105367, -0.0148546, -0.212254, 0.977045) False
+Global Rotation EulerXYZ: (0.0142924, -0.0335065, -0.427594) False
+
+time: 63725050308.866013
+Global Translation: (-868.063, 914.625, 97.6302) False
+Global Rotation Quaternion: (0.0105807, -0.0151117, -0.214233, 0.976608) False
+Global Rotation EulerXYZ: (0.0142003, -0.0340565, -0.431647) False
+
+time: 63725050308.876007
+Global Translation: (-867.85, 914.642, 97.596) False
+Global Rotation Quaternion: (0.0105434, -0.0154887, -0.21581, 0.976256) False
+Global Rotation EulerXYZ: (0.0139098, -0.0347997, -0.434879) False
+
+time: 63725050308.885010
+Global Translation: (-867.704, 914.668, 97.5408) False
+Global Rotation Quaternion: (0.0104112, -0.0156045, -0.217535, 0.975872) False
+Global Rotation EulerXYZ: (0.0135397, -0.0349927, -0.438418) False
+
+time: 63725050308.895004
+Global Translation: (-867.608, 914.738, 97.5386) False
+Global Rotation Quaternion: (0.0101809, -0.0157369, -0.219478, 0.975437) False
+Global Rotation EulerXYZ: (0.0129623, -0.0351769, -0.44241) False
+
+time: 63725050308.904999
+Global Translation: (-867.519, 914.76, 97.6118) False
+Global Rotation Quaternion: (0.00993015, -0.0156188, -0.220913, 0.975118) False
+Global Rotation EulerXYZ: (0.0124733, -0.0348547, -0.44536) False
+
+time: 63725050308.915001
+Global Translation: (-867.415, 914.78, 97.6629) False
+Global Rotation Quaternion: (0.0100361, -0.0156886, -0.222148, 0.974835) False
+Global Rotation EulerXYZ: (0.0126047, -0.0350538, -0.447892) False
+
+time: 63725050308.924988
+Global Translation: (-867.307, 914.798, 97.6829) False
+Global Rotation Quaternion: (0.0103067, -0.0151982, -0.223401, 0.974554) False
+Global Rotation EulerXYZ: (0.0133065, -0.0342347, -0.450454) False
+
+time: 63725050308.935005
+Global Translation: (-867.177, 914.863, 97.6561) False
+Global Rotation Quaternion: (0.0103963, -0.0151946, -0.225064, 0.97417) False
+Global Rotation EulerXYZ: (0.0134244, -0.0342907, -0.453865) False
+
+time: 63725050308.945007
+Global Translation: (-866.99, 914.956, 97.5982) False
+Global Rotation Quaternion: (0.0102297, -0.0155889, -0.227006, 0.973715) False
+Global Rotation EulerXYZ: (0.0128522, -0.0350098, -0.457861) False
+
+time: 63725050308.954002
+Global Translation: (-866.802, 914.969, 97.5829) False
+Global Rotation Quaternion: (0.0100876, -0.0153712, -0.22845, 0.973382) False
+Global Rotation EulerXYZ: (0.012623, -0.03454, -0.460832) False
+
+time: 63725050308.964005
+Global Translation: (-866.649, 914.988, 97.5168) False
+Global Rotation Quaternion: (0.0100423, -0.015194, -0.229663, 0.9731) False
+Global Rotation EulerXYZ: (0.012573, -0.0341899, -0.463327) False
+
+time: 63725050308.974991
+Global Translation: (-866.508, 915.052, 97.4639) False
+Global Rotation Quaternion: (0.0101664, -0.0153181, -0.231151, 0.972744) False
+Global Rotation EulerXYZ: (0.012705, -0.0345081, -0.466382) False
+
+time: 63725050308.985001
+Global Translation: (-866.37, 915.126, 97.4477) False
+Global Rotation Quaternion: (0.0103556, -0.0155833, -0.232785, 0.972348) False
+Global Rotation EulerXYZ: (0.0128918, -0.0351333, -0.469738) False
+
+time: 63725050308.994995
+Global Translation: (-866.186, 915.166, 97.433) False
+Global Rotation Quaternion: (0.0104261, -0.0155921, -0.234095, 0.972033) False
+Global Rotation EulerXYZ: (0.0129773, -0.0352008, -0.472432) False
+
+time: 63725050309.005997
+Global Translation: (-866.021, 915.185, 97.4046) False
+Global Rotation Quaternion: (0.0107131, -0.0156312, -0.235398, 0.971714) False
+Global Rotation EulerXYZ: (0.0134699, -0.0354292, -0.475104) False
+
+time: 63725050309.014999
+Global Translation: (-865.853, 915.249, 97.3656) False
+Global Rotation Quaternion: (0.0110259, -0.0157574, -0.237057, 0.971305) False
+Global Rotation EulerXYZ: (0.0139577, -0.0358457, -0.47851) False
+
+time: 63725050309.025002
+Global Translation: (-865.675, 915.341, 97.3692) False
+Global Rotation Quaternion: (0.0109484, -0.0165913, -0.239242, 0.970756) False
+Global Rotation EulerXYZ: (0.0133275, -0.0374596, -0.483018) False
+
+time: 63725050309.035004
+Global Translation: (-865.506, 915.407, 97.379) False
+Global Rotation Quaternion: (0.0106049, -0.0166578, -0.24135, 0.970237) False
+Global Rotation EulerXYZ: (0.012547, -0.0374518, -0.487375) False
+
+time: 63725050309.043999
+Global Translation: (-865.337, 915.466, 97.3911) False
+Global Rotation Quaternion: (0.0104155, -0.0163997, -0.242929, 0.969849) False
+Global Rotation EulerXYZ: (0.0122436, -0.0368793, -0.490638) False
+
+time: 63725050309.054993
+Global Translation: (-865.201, 915.477, 97.4208) False
+Global Rotation Quaternion: (0.0106153, -0.0165, -0.244515, 0.969447) False
+Global Rotation EulerXYZ: (0.012522, -0.0371915, -0.493902) False
+
+time: 63725050309.065002
+Global Translation: (-865.06, 915.467, 97.4247) False
+Global Rotation Quaternion: (0.0105962, -0.0165013, -0.246366, 0.968978) False
+Global Rotation EulerXYZ: (0.0124132, -0.0372085, -0.497724) False
+
+time: 63725050309.073990
+Global Translation: (-864.938, 915.448, 97.4339) False
+Global Rotation Quaternion: (0.0105729, -0.0162442, -0.248018, 0.968562) False
+Global Rotation EulerXYZ: (0.0124321, -0.0367198, -0.501135) False
+
+time: 63725050309.085007
+Global Translation: (-864.801, 915.483, 97.4488) False
+Global Rotation Quaternion: (0.0104149, -0.0157587, -0.249211, 0.968265) False
+Global Rotation EulerXYZ: (0.0123224, -0.0357158, -0.503602) False
+
+time: 63725050309.095001
+Global Translation: (-864.665, 915.522, 97.4221) False
+Global Rotation Quaternion: (0.00994802, -0.0158038, -0.251058, 0.967792) False
+Global Rotation EulerXYZ: (0.0113273, -0.0355922, -0.507435) False
+
+time: 63725050309.105011
+Global Translation: (-864.496, 915.584, 97.3628) False
+Global Rotation Quaternion: (0.00961774, -0.0162708, -0.253394, 0.967179) False
+Global Rotation EulerXYZ: (0.0103653, -0.0363558, -0.512279) False
+
+time: 63725050309.114998
+Global Translation: (-864.327, 915.635, 97.3316) False
+Global Rotation Quaternion: (0.00958512, -0.01635, -0.255099, 0.966729) False
+Global Rotation EulerXYZ: (0.0101977, -0.0365104, -0.515808) False
+
+time: 63725050309.124985
+Global Translation: (-864.186, 915.66, 97.3064) False
+Global Rotation Quaternion: (0.00961915, -0.0163467, -0.256276, 0.966418) False
+Global Rotation EulerXYZ: (0.0102207, -0.0365339, -0.518244) False
+
+time: 63725050309.135002
+Global Translation: (-864.087, 915.702, 97.3105) False
+Global Rotation Quaternion: (0.00980826, -0.0165505, -0.25742, 0.966108) False
+Global Rotation EulerXYZ: (0.0104382, -0.0370373, -0.520607) False
+
+time: 63725050309.145004
+Global Translation: (-863.999, 915.794, 97.2765) False
+Global Rotation Quaternion: (0.00994506, -0.016891, -0.259036, 0.965669) False
+Global Rotation EulerXYZ: (0.0104642, -0.0377834, -0.523953) False
+
+time: 63725050309.154999
+Global Translation: (-863.889, 915.811, 97.2857) False
+Global Rotation Quaternion: (0.00974492, -0.0166356, -0.260508, 0.965279) False
+Global Rotation EulerXYZ: (0.0101529, -0.0372019, -0.527008) False
+
+time: 63725050309.164993
+Global Translation: (-863.725, 915.855, 97.2832) False
+Global Rotation Quaternion: (0.00957909, -0.0162698, -0.261652, 0.964978) False
+Global Rotation EulerXYZ: (0.00997995, -0.0364209, -0.529381) False
+
+time: 63725050309.176010
+Global Translation: (-863.595, 915.887, 97.2882) False
+Global Rotation Quaternion: (0.00938376, -0.0162551, -0.263107, 0.964584) False
+Global Rotation EulerXYZ: (0.00955559, -0.0363047, -0.532406) False
+
+time: 63725050309.185013
+Global Translation: (-863.452, 915.941, 97.2472) False
+Global Rotation Quaternion: (0.00946551, -0.0165828, -0.265154, 0.964017) False
+Global Rotation EulerXYZ: (0.00946247, -0.0370002, -0.536653) False
+
+time: 63725050309.194992
+Global Translation: (-863.256, 916.001, 97.2338) False
+Global Rotation Quaternion: (0.00937394, -0.0168895, -0.266979, 0.963509) False
+Global Rotation EulerXYZ: (0.00905196, -0.0375605, -0.540446) False
+
+time: 63725050309.206001
+Global Translation: (-863.082, 916.019, 97.2454) False
+Global Rotation Quaternion: (0.00942585, -0.0167668, -0.268301, 0.963143) False
+Global Rotation EulerXYZ: (0.00916631, -0.0373643, -0.54319) False
+
+time: 63725050309.214996
+Global Translation: (-862.923, 916.038, 97.2545) False
+Global Rotation Quaternion: (0.00953287, -0.0167846, -0.269345, 0.96285) False
+Global Rotation EulerXYZ: (0.00932246, -0.0374661, -0.545355) False
+
+time: 63725050309.225006
+Global Translation: (-862.81, 916.03, 97.2793) False
+Global Rotation Quaternion: (0.00979123, -0.0167383, -0.270724, 0.962462) False
+Global Rotation EulerXYZ: (0.00979152, -0.0375302, -0.548211) False
+
+time: 63725050309.235001
+Global Translation: (-862.723, 916.059, 97.3037) False
+Global Rotation Quaternion: (0.00981397, -0.0168274, -0.2722, 0.962043) False
+Global Rotation EulerXYZ: (0.00972916, -0.037729, -0.551282) False
+
+time: 63725050309.246002
+Global Translation: (-862.568, 916.079, 97.3485) False
+Global Rotation Quaternion: (0.00971411, -0.0170509, -0.273667, 0.961624) False
+Global Rotation EulerXYZ: (0.00935702, -0.0381193, -0.554338) False
+
+time: 63725050309.255997
+Global Translation: (-862.379, 916.094, 97.3733) False
+Global Rotation Quaternion: (0.00988506, -0.017379, -0.275008, 0.961234) False
+Global Rotation EulerXYZ: (0.0094523, -0.0388572, -0.557126) False
+
+time: 63725050309.266998
+Global Translation: (-862.243, 916.168, 97.3266) False
+Global Rotation Quaternion: (0.0100907, -0.0174268, -0.276611, 0.960771) False
+Global Rotation EulerXYZ: (0.00975632, -0.0390787, -0.560458) False
+
+time: 63725050309.274994
+Global Translation: (-862.137, 916.29, 97.3108) False
+Global Rotation Quaternion: (0.00996936, -0.0180472, -0.27838, 0.96025) False
+Global Rotation EulerXYZ: (0.00910568, -0.040221, -0.564154) False
+
+time: 63725050309.285004
+Global Translation: (-861.996, 916.367, 97.3194) False
+Global Rotation Quaternion: (0.00968943, -0.0179705, -0.279932, 0.959803) False
+Global Rotation EulerXYZ: (0.0085458, -0.0399316, -0.567397) False
+
+time: 63725050309.294998
+Global Translation: (-861.834, 916.422, 97.2807) False
+Global Rotation Quaternion: (0.00947823, -0.0179804, -0.28155, 0.959331) False
+Global Rotation EulerXYZ: (0.00806729, -0.039846, -0.570778) False
+
+time: 63725050309.305008
+Global Translation: (-861.7, 916.424, 97.2494) False
+Global Rotation Quaternion: (0.00962476, -0.0177015, -0.282794, 0.958969) False
+Global Rotation EulerXYZ: (0.0084546, -0.0394043, -0.573364) False
+
+time: 63725050309.314995
+Global Translation: (-861.597, 916.426, 97.2147) False
+Global Rotation Quaternion: (0.00941492, -0.0172444, -0.284152, 0.958578) False
+Global Rotation EulerXYZ: (0.008256, -0.0384202, -0.576199) False
+
+time: 63725050309.325012
+Global Translation: (-861.504, 916.47, 97.2321) False
+Global Rotation Quaternion: (0.009276, -0.0171791, -0.285618, 0.958145) False
+Global Rotation EulerXYZ: (0.00796805, -0.0382283, -0.579265) False
+
+time: 63725050309.335007
+Global Translation: (-861.367, 916.539, 97.2155) False
+Global Rotation Quaternion: (0.00874073, -0.0171383, -0.287375, 0.957625) False
+Global Rotation EulerXYZ: (0.00689544, -0.037857, -0.58295) False
+
+time: 63725050309.345001
+Global Translation: (-861.188, 916.544, 97.1772) False
+Global Rotation Quaternion: (0.00860489, -0.0169167, -0.289253, 0.957065) False
+Global Rotation EulerXYZ: (0.00668916, -0.0373675, -0.586876) False
+
+time: 63725050309.356003
+Global Translation: (-861.029, 916.605, 97.1383) False
+Global Rotation Quaternion: (0.00850125, -0.0168892, -0.290875, 0.956574) False
+Global Rotation EulerXYZ: (0.00644337, -0.0372659, -0.590271) False
+
+time: 63725050309.364990
+Global Translation: (-860.901, 916.661, 97.1568) False
+Global Rotation Quaternion: (0.00842239, -0.0170128, -0.2923, 0.956138) False
+Global Rotation EulerXYZ: (0.00616459, -0.0374657, -0.593258) False
+
+time: 63725050309.375008
+Global Translation: (-860.81, 916.685, 97.1928) False
+Global Rotation Quaternion: (0.00841433, -0.01741, -0.293888, 0.955644) False
+Global Rotation EulerXYZ: (0.00585335, -0.0382305, -0.596588) False
+
+time: 63725050309.385010
+Global Translation: (-860.679, 916.656, 97.2418) False
+Global Rotation Quaternion: (0.00854874, -0.0176067, -0.295553, 0.955126) False
+Global Rotation EulerXYZ: (0.0059273, -0.038696, -0.600073) False
+
+time: 63725050309.395004
+Global Translation: (-860.532, 916.615, 97.2484) False
+Global Rotation Quaternion: (0.00915557, -0.0175116, -0.297066, 0.954652) False
+Global Rotation EulerXYZ: (0.007082, -0.0388844, -0.603221) False
+
+time: 63725050309.404999
+Global Translation: (-860.38, 916.646, 97.27) False
+Global Rotation Quaternion: (0.00921476, -0.0173559, -0.298401, 0.954238) False
+Global Rotation EulerXYZ: (0.00723355, -0.0386324, -0.606015) False
+
+time: 63725050309.414009
+Global Translation: (-860.217, 916.716, 97.2887) False
+Global Rotation Quaternion: (0.00884125, -0.0178322, -0.300018, 0.953726) False
+Global Rotation EulerXYZ: (0.00616912, -0.0393292, -0.609426) False
+
+time: 63725050309.424995
+Global Translation: (-860.037, 916.758, 97.2596) False
+Global Rotation Quaternion: (0.00884392, -0.0180783, -0.301739, 0.953178) False
+Global Rotation EulerXYZ: (0.00595459, -0.0398112, -0.613041) False
+
+time: 63725050309.434998
+Global Translation: (-859.868, 916.764, 97.2125) False
+Global Rotation Quaternion: (0.00891335, -0.0179094, -0.303347, 0.95267) False
+Global Rotation EulerXYZ: (0.00612228, -0.0395414, -0.616413) False
+
+time: 63725050309.445000
+Global Translation: (-859.694, 916.843, 97.1607) False
+Global Rotation Quaternion: (0.00887075, -0.0180637, -0.304907, 0.95217) False
+Global Rotation EulerXYZ: (0.0058821, -0.0398195, -0.619694) False
+
+time: 63725050309.455002
+Global Translation: (-859.512, 916.901, 97.148) False
+Global Rotation Quaternion: (0.00869579, -0.0179607, -0.306396, 0.951695) False
+Global Rotation EulerXYZ: (0.00554965, -0.0395253, -0.622829) False
+
+time: 63725050309.465004
+Global Translation: (-859.381, 916.909, 97.1498) False
+Global Rotation Quaternion: (0.00861001, -0.0179586, -0.307942, 0.951197) False
+Global Rotation EulerXYZ: (0.00532335, -0.0394774, -0.626082) False
+
+time: 63725050309.475006
+Global Translation: (-859.244, 916.911, 97.1138) False
+Global Rotation Quaternion: (0.00874704, -0.0177354, -0.309679, 0.950635) False
+Global Rotation EulerXYZ: (0.00565028, -0.0391474, -0.629728) False
+
+time: 63725050309.484001
+Global Translation: (-859.084, 916.965, 97.0651) False
+Global Rotation Quaternion: (0.00889763, -0.0179754, -0.311264, 0.950112) False
+Global Rotation EulerXYZ: (0.00572179, -0.0397068, -0.633065) False
+
+time: 63725050309.494003
+Global Translation: (-858.92, 917.036, 97.0164) False
+Global Rotation Quaternion: (0.00859418, -0.0181596, -0.312653, 0.949655) False
+Global Rotation EulerXYZ: (0.00497166, -0.0398753, -0.636004) False
+
+time: 63725050309.504990
+Global Translation: (-858.791, 917.086, 97.0281) False
+Global Rotation Quaternion: (0.00840514, -0.0185203, -0.314423, 0.949065) False
+Global Rotation EulerXYZ: (0.00431114, -0.0404506, -0.639748) False
+
+time: 63725050309.515999
+Global Translation: (-858.652, 917.059, 97.0685) False
+Global Rotation Quaternion: (0.00857594, -0.0185386, -0.316457, 0.948387) False
+Global Rotation EulerXYZ: (0.00453703, -0.0406025, -0.644031) False
+
+time: 63725050309.526001
+Global Translation: (-858.502, 917.055, 97.0556) False
+Global Rotation Quaternion: (0.0087288, -0.0186519, -0.318255, 0.947782) False
+Global Rotation EulerXYZ: (0.00467779, -0.0409233, -0.647823) False
+
+time: 63725050309.535004
+Global Translation: (-858.371, 917.086, 97.0814) False
+Global Rotation Quaternion: (0.00850473, -0.0181943, -0.319422, 0.9474) False
+Global Rotation EulerXYZ: (0.00449504, -0.0399183, -0.650286) False
+
+time: 63725050309.546005
+Global Translation: (-858.292, 917.06, 97.1467) False
+Global Rotation Quaternion: (0.00826234, -0.0181032, -0.320831, 0.946927) False
+Global Rotation EulerXYZ: (0.00403472, -0.0395968, -0.653267) False
+
+time: 63725050309.556000
+Global Translation: (-858.173, 916.997, 97.1911) False
+Global Rotation Quaternion: (0.00836556, -0.0179914, -0.322669, 0.946304) False
+Global Rotation EulerXYZ: (0.00422546, -0.0394596, -0.657147) False
+
+time: 63725050309.565994
+Global Translation: (-858.025, 916.952, 97.1733) False
+Global Rotation Quaternion: (0.00836232, -0.0174716, -0.324485, 0.945693) False
+Global Rotation EulerXYZ: (0.0044812, -0.0384819, -0.660976) False
+
+time: 63725050309.577011
+Global Translation: (-857.837, 916.969, 97.1259) False
+Global Rotation Quaternion: (0.00811706, -0.0173342, -0.325902, 0.94521) False
+Global Rotation EulerXYZ: (0.00404905, -0.0380689, -0.663981) False
+
+time: 63725050309.584991
+Global Translation: (-857.649, 917.019, 97.0966) False
+Global Rotation Quaternion: (0.00774057, -0.0174807, -0.327636, 0.944611) False
+Global Rotation EulerXYZ: (0.00317135, -0.0381063, -0.667667) False
+
+time: 63725050309.595001
+Global Translation: (-857.487, 917.045, 97.0666) False
+Global Rotation Quaternion: (0.00767066, -0.0173101, -0.329465, 0.943978) False
+Global Rotation EulerXYZ: (0.00307792, -0.0377441, -0.671541) False
+
+time: 63725050309.604996
+Global Translation: (-857.296, 917.076, 97.007) False
+Global Rotation Quaternion: (0.00798414, -0.0174746, -0.331095, 0.943402) False
+Global Rotation EulerXYZ: (0.00349555, -0.0382675, -0.674991) False
+
+time: 63725050309.615013
+Global Translation: (-857.149, 917.084, 96.9978) False
+Global Rotation Quaternion: (0.00784283, -0.0172689, -0.332263, 0.942996) False
+Global Rotation EulerXYZ: (0.00331826, -0.0377897, -0.677469) False
+
+time: 63725050309.625000
+Global Translation: (-856.989, 917.105, 97.0053) False
+Global Rotation Quaternion: (0.00781525, -0.0173516, -0.333404, 0.942592) False
+Global Rotation EulerXYZ: (0.00316528, -0.0379314, -0.679892) False
+
+time: 63725050309.634995
+Global Translation: (-856.858, 917.101, 96.9945) False
+Global Rotation Quaternion: (0.00790201, -0.0180119, -0.335036, 0.942) False
+Global Rotation EulerXYZ: (0.00282032, -0.0392393, -0.683368) False
+
+time: 63725050309.644997
+Global Translation: (-856.65, 917.084, 96.9624) False
+Global Rotation Quaternion: (0.00807916, -0.0184679, -0.337067, 0.941265) False
+Global Rotation EulerXYZ: (0.00276164, -0.0402237, -0.68769) False
+
+time: 63725050309.654999
+Global Translation: (-856.449, 917.086, 96.9838) False
+Global Rotation Quaternion: (0.00807062, -0.0185928, -0.338593, 0.940714) False
+Global Rotation EulerXYZ: (0.00259561, -0.0404574, -0.690939) False
+
+time: 63725050309.665001
+Global Translation: (-856.293, 917.106, 96.9661) False
+Global Rotation Quaternion: (0.00779253, -0.0188197, -0.340046, 0.940188) False
+Global Rotation EulerXYZ: (0.00185534, -0.0406989, -0.694043) False
+
+time: 63725050309.675003
+Global Translation: (-856.191, 917.075, 97.01) False
+Global Rotation Quaternion: (0.00786833, -0.0189666, -0.341789, 0.939552) False
+Global Rotation EulerXYZ: (0.0018218, -0.0410304, -0.697755) False
+
+time: 63725050309.685005
+Global Translation: (-856.083, 916.987, 97.0208) False
+Global Rotation Quaternion: (0.00790505, -0.0187628, -0.343425, 0.938959) False
+Global Rotation EulerXYZ: (0.00195938, -0.0406759, -0.701235) False
+
+time: 63725050309.695007
+Global Translation: (-855.934, 916.937, 97.0517) False
+Global Rotation Quaternion: (0.0078895, -0.018428, -0.344479, 0.93858) False
+Global Rotation EulerXYZ: (0.00211542, -0.0400385, -0.703474) False
+
+time: 63725050309.704987
+Global Translation: (-855.836, 916.901, 97.0748) False
+Global Rotation Quaternion: (0.00736563, -0.018026, -0.345782, 0.938113) False
+Global Rotation EulerXYZ: (0.00135448, -0.0389245, -0.706257) False
+
+time: 63725050309.714996
+Global Translation: (-855.716, 916.813, 97.0545) False
+Global Rotation Quaternion: (0.00712358, -0.0175397, -0.347326, 0.937554) False
+Global Rotation EulerXYZ: (0.00117435, -0.0378462, -0.709546) False
+
+time: 63725050309.725006
+Global Translation: (-855.61, 916.684, 97.0135) False
+Global Rotation Quaternion: (0.00699852, -0.0172601, -0.348825, 0.937003) False
+Global Rotation EulerXYZ: (0.0010745, -0.0372367, -0.712743) False
+
+time: 63725050309.735001
+Global Translation: (-855.458, 916.66, 96.9259) False
+Global Rotation Quaternion: (0.00705427, -0.0170679, -0.350415, 0.936413) False
+Global Rotation EulerXYZ: (0.00125057, -0.0369174, -0.716132) False
+
+time: 63725050309.744995
+Global Translation: (-855.32, 916.668, 96.9472) False
+Global Rotation Quaternion: (0.00672395, -0.0170654, -0.352009, 0.935817) False
+Global Rotation EulerXYZ: (0.000570792, -0.0366822, -0.71955) False
+
+time: 63725050309.753998
+Global Translation: (-855.178, 916.661, 96.9543) False
+Global Rotation Quaternion: (0.00681787, -0.0172188, -0.353559, 0.935229) False
+Global Rotation EulerXYZ: (0.000577195, -0.0370366, -0.722866) False
+
+time: 63725050309.765015
+Global Translation: (-855.038, 916.557, 96.9933) False
+Global Rotation Quaternion: (0.00704524, -0.0171583, -0.35494, 0.934705) False
+Global Rotation EulerXYZ: (0.000990797, -0.0370857, -0.725811) False
+
+time: 63725050309.775002
+Global Translation: (-854.908, 916.433, 97.0131) False
+Global Rotation Quaternion: (0.00720909, -0.01708, -0.356314, 0.934182) False
+Global Rotation EulerXYZ: (0.00129841, -0.0370576, -0.728747) False
+
+time: 63725050309.784012
+Global Translation: (-854.774, 916.365, 97.0372) False
+Global Rotation Quaternion: (0.00724886, -0.0173797, -0.358021, 0.933524) False
+Global Rotation EulerXYZ: (0.00109016, -0.037648, -0.73241) False
+
+time: 63725050309.794998
+Global Translation: (-854.603, 916.355, 97.0457) False
+Global Rotation Quaternion: (0.00714686, -0.0178919, -0.360045, 0.932736) False
+Global Rotation EulerXYZ: (0.000448814, -0.0385328, -0.736766) False
+
+time: 63725050309.804993
+Global Translation: (-854.362, 916.36, 97.0227) False
+Global Rotation Quaternion: (0.00711581, -0.0180714, -0.361695, 0.932094) False
+Global Rotation EulerXYZ: (0.000192697, -0.0388458, -0.740313) False
+
+time: 63725050309.813995
+Global Translation: (-854.147, 916.386, 96.9559) False
+Global Rotation Quaternion: (0.00706311, -0.0183123, -0.363281, 0.931473) False
+Global Rotation EulerXYZ: (-0.000146942, -0.0392567, -0.743727) False
+
+time: 63725050309.823990
+Global Translation: (-853.974, 916.348, 96.9144) False
+Global Rotation Quaternion: (0.00702115, -0.0183772, -0.36497, 0.930811) False
+Global Rotation EulerXYZ: (-0.000343779, -0.0393465, -0.747361) False
+
+time: 63725050309.834007
+Global Translation: (-853.789, 916.272, 96.8927) False
+Global Rotation Quaternion: (0.00715349, -0.0181412, -0.366747, 0.930116) False
+Global Rotation EulerXYZ: (6.68644e-07, -0.0390039, -0.751169) False
+
+time: 63725050309.844009
+Global Translation: (-853.608, 916.259, 96.8349) False
+Global Rotation Quaternion: (0.00716126, -0.017795, -0.368332, 0.929496) False
+Global Rotation EulerXYZ: (0.000203949, -0.0383656, -0.75457) False
+
+time: 63725050309.854996
+Global Translation: (-853.427, 916.288, 96.8208) False
+Global Rotation Quaternion: (0.00671234, -0.0176128, -0.369791, 0.928924) False
+Global Rotation EulerXYZ: (-0.000556012, -0.0376951, -0.757721) False
+
+time: 63725050309.863991
+Global Translation: (-853.261, 916.291, 96.8103) False
+Global Rotation Quaternion: (0.00629896, -0.0171806, -0.371518, 0.928245) False
+Global Rotation EulerXYZ: (-0.00107253, -0.0365841, -0.76144) False
+
+time: 63725050309.873993
+Global Translation: (-853.109, 916.185, 96.7924) False
+Global Rotation Quaternion: (0.00608668, -0.0172284, -0.373815, 0.927323) False
+Global Rotation EulerXYZ: (-0.00159289, -0.0365113, -0.766401) False
+
+time: 63725050309.885002
+Global Translation: (-852.945, 916.175, 96.7717) False
+Global Rotation Quaternion: (0.00633953, -0.0173928, -0.375699, 0.926557) False
+Global Rotation EulerXYZ: (-0.00132195, -0.0370028, -0.770465) False
+
+time: 63725050309.895004
+Global Translation: (-852.775, 916.092, 96.827) False
+Global Rotation Quaternion: (0.00625018, -0.0174025, -0.377365, 0.92588) False
+Global Rotation EulerXYZ: (-0.00156144, -0.0369509, -0.774067) False
+
+time: 63725050309.904999
+Global Translation: (-852.659, 916.03, 96.8693) False
+Global Rotation Quaternion: (0.0060742, -0.0175943, -0.379059, 0.925185) False
+Global Rotation EulerXYZ: (-0.00210044, -0.0371694, -0.777739) False
+
+time: 63725050309.915993
+Global Translation: (-852.525, 916.002, 96.8467) False
+Global Rotation Quaternion: (0.00615868, -0.0175707, -0.380634, 0.924538) False
+Global Rotation EulerXYZ: (-0.00198955, -0.0371866, -0.781143) False
+
+time: 63725050309.925003
+Global Translation: (-852.4, 915.969, 96.8533) False
+Global Rotation Quaternion: (0.00600365, -0.0173846, -0.382285, 0.923861) False
+Global Rotation EulerXYZ: (-0.00220017, -0.0367204, -0.784717) False
+
+time: 63725050309.936005
+Global Translation: (-852.244, 915.965, 96.8085) False
+Global Rotation Quaternion: (0.00570101, -0.0173305, -0.384091, 0.923115) False
+Global Rotation EulerXYZ: (-0.00278941, -0.0363835, -0.788634) False
+
+time: 63725050309.944992
+Global Translation: (-852.059, 915.938, 96.752) False
+Global Rotation Quaternion: (0.00569198, -0.0174016, -0.385744, 0.922424) False
+Global Rotation EulerXYZ: (-0.00292623, -0.0365026, -0.792223) False
+
+time: 63725050309.955002
+Global Translation: (-851.855, 915.925, 96.6881) False
+Global Rotation Quaternion: (0.00564459, -0.0172521, -0.387394, 0.921736) False
+Global Rotation EulerXYZ: (-0.00296302, -0.036185, -0.795798) False
+
+time: 63725050309.966003
+Global Translation: (-851.685, 916.001, 96.626) False
+Global Rotation Quaternion: (0.00574644, -0.0172557, -0.389014, 0.921052) False
+Global Rotation EulerXYZ: (-0.00284175, -0.0362657, -0.799314) False
+
+time: 63725050309.974998
+Global Translation: (-851.534, 916.018, 96.6683) False
+Global Rotation Quaternion: (0.00565194, -0.0170122, -0.390611, 0.920381) False
+Global Rotation EulerXYZ: (-0.00288828, -0.0357384, -0.802779) False
+
+time: 63725050309.985001
+Global Translation: (-851.379, 915.982, 96.6501) False
+Global Rotation Quaternion: (0.00553481, -0.0171605, -0.392174, 0.919714) False
+Global Rotation EulerXYZ: (-0.00328107, -0.0359145, -0.806185) False
+
+time: 63725050309.994995
+Global Translation: (-851.237, 915.883, 96.6343) False
+Global Rotation Quaternion: (0.00575925, -0.0167945, -0.393551, 0.919131) False
+Global Rotation EulerXYZ: (-0.0026336, -0.0354132, -0.809164) False
+
+time: 63725050310.005005
+Global Translation: (-851.107, 915.903, 96.6327) False
+Global Rotation Quaternion: (0.00559537, -0.0165932, -0.394914, 0.918551) False
+Global Rotation EulerXYZ: (-0.00282822, -0.0349099, -0.812129) False
+
+time: 63725050310.015007
+Global Translation: (-850.945, 915.922, 96.6607) False
+Global Rotation Quaternion: (0.00529547, -0.0168607, -0.396625, 0.917811) False
+Global Rotation EulerXYZ: (-0.00365652, -0.0351577, -0.815873) False
+
+time: 63725050310.024994
+Global Translation: (-850.79, 915.86, 96.6875) False
+Global Rotation Quaternion: (0.00532268, -0.0170323, -0.398331, 0.917068) False
+Global Rotation EulerXYZ: (-0.00380889, -0.0354874, -0.819599) False
+
+time: 63725050310.035004
+Global Translation: (-850.616, 915.813, 96.6708) False
+Global Rotation Quaternion: (0.00564594, -0.0169577, -0.399929, 0.916372) False
+Global Rotation EulerXYZ: (-0.00321823, -0.0356025, -0.823076) False
+
+time: 63725050310.044998
+Global Translation: (-850.455, 915.831, 96.6647) False
+Global Rotation Quaternion: (0.005833, -0.0171689, -0.401356, 0.915743) False
+Global Rotation EulerXYZ: (-0.00310069, -0.0361347, -0.826194) False
+
+time: 63725050310.054001
+Global Translation: (-850.313, 915.885, 96.6742) False
+Global Rotation Quaternion: (0.00563709, -0.0173357, -0.402624, 0.915184) False
+Global Rotation EulerXYZ: (-0.00364401, -0.0362779, -0.828976) False
+
+time: 63725050310.064995
+Global Translation: (-850.189, 915.889, 96.6697) False
+Global Rotation Quaternion: (0.00546748, -0.0170892, -0.404018, 0.914575) False
+Global Rotation EulerXYZ: (-0.00381023, -0.0356841, -0.832019) False
+
+time: 63725050310.074997
+Global Translation: (-850.038, 915.847, 96.6146) False
+Global Rotation Quaternion: (0.00549409, -0.016724, -0.405533, 0.913911) False
+Global Rotation EulerXYZ: (-0.00352423, -0.0350318, -0.835322) False
+
+time: 63725050310.084999
+Global Translation: (-849.85, 915.839, 96.5616) False
+Global Rotation Quaternion: (0.00554664, -0.0167137, -0.406998, 0.913259) False
+Global Rotation EulerXYZ: (-0.00347603, -0.0350501, -0.83853) False
+
+time: 63725050310.095001
+Global Translation: (-849.671, 915.88, 96.4967) False
+Global Rotation Quaternion: (0.00517658, -0.0168356, -0.408384, 0.91264) False
+Global Rotation EulerXYZ: (-0.00430475, -0.0349649, -0.841581) False
+
+time: 63725050310.103996
+Global Translation: (-849.534, 915.893, 96.4919) False
+Global Rotation Quaternion: (0.00491823, -0.0167949, -0.410014, 0.911911) False
+Global Rotation EulerXYZ: (-0.00480523, -0.034671, -0.84516) False
+
+time: 63725050310.113998
+Global Translation: (-849.359, 915.834, 96.4543) False
+Global Rotation Quaternion: (0.00477735, -0.0166193, -0.411995, 0.911022) False
+Global Rotation EulerXYZ: (-0.0049925, -0.0342242, -0.849505) False
+
+time: 63725050310.125008
+Global Translation: (-849.203, 915.747, 96.4471) False
+Global Rotation Quaternion: (0.00495797, -0.0162168, -0.413827, 0.910198) False
+Global Rotation EulerXYZ: (-0.0043989, -0.0336307, -0.853512) False
+
+time: 63725050310.134003
+Global Translation: (-849.035, 915.707, 96.4766) False
+Global Rotation Quaternion: (0.00479797, -0.0161751, -0.415136, 0.909603) False
+Global Rotation EulerXYZ: (-0.0047039, -0.0334157, -0.856393) False
+
+time: 63725050310.144989
+Global Translation: (-848.933, 915.7, 96.5005) False
+Global Rotation Quaternion: (0.00443447, -0.0160522, -0.416421, 0.909019) False
+Global Rotation EulerXYZ: (-0.00530983, -0.0328827, -0.859226) False
+
+time: 63725050310.153992
+Global Translation: (-848.88, 915.629, 96.548) False
+Global Rotation Quaternion: (0.00423627, -0.0157739, -0.417996, 0.908302) False
+Global Rotation EulerXYZ: (-0.00549407, -0.0322019, -0.862687) False
+
+time: 63725050310.164001
+Global Translation: (-848.749, 915.569, 96.5338) False
+Global Rotation Quaternion: (0.0043601, -0.0157017, -0.419794, 0.907473) False
+Global Rotation EulerXYZ: (-0.00527238, -0.032164, -0.866644) False
+
+time: 63725050310.174995
+Global Translation: (-848.583, 915.565, 96.4971) False
+Global Rotation Quaternion: (0.00415604, -0.0157757, -0.421132, 0.906853) False
+Global Rotation EulerXYZ: (-0.00575248, -0.0321185, -0.869602) False
+
+time: 63725050310.184006
+Global Translation: (-848.458, 915.583, 96.5158) False
+Global Rotation Quaternion: (0.00391075, -0.0157322, -0.422187, 0.906364) False
+Global Rotation EulerXYZ: (-0.00619787, -0.0318256, -0.871934) False
+
+time: 63725050310.194000
+Global Translation: (-848.38, 915.584, 96.51) False
+Global Rotation Quaternion: (0.00394127, -0.0157231, -0.423383, 0.905806) False
+Global Rotation EulerXYZ: (-0.00617686, -0.0318268, -0.874573) False
+
+time: 63725050310.205017
+Global Translation: (-848.284, 915.568, 96.4852) False
+Global Rotation Quaternion: (0.00432712, -0.0158751, -0.424966, 0.90506) False
+Global Rotation EulerXYZ: (-0.00566315, -0.0324192, -0.878069) False
+
+time: 63725050310.213997
+Global Translation: (-848.123, 915.522, 96.4605) False
+Global Rotation Quaternion: (0.00439913, -0.0156552, -0.426213, 0.904477) False
+Global Rotation EulerXYZ: (-0.00538986, -0.0320749, -0.880816) False
+
+time: 63725050310.224991
+Global Translation: (-847.957, 915.534, 96.4436) False
+Global Rotation Quaternion: (0.00438902, -0.0158649, -0.427235, 0.903991) False
+Global Rotation EulerXYZ: (-0.00562377, -0.0324394, -0.883083) False
+
+time: 63725050310.234001
+Global Translation: (-847.822, 915.564, 96.4449) False
+Global Rotation Quaternion: (0.00419072, -0.015809, -0.428217, 0.903528) False
+Global Rotation EulerXYZ: (-0.00596967, -0.0321624, -0.885261) False
+
+time: 63725050310.244003
+Global Translation: (-847.698, 915.531, 96.4586) False
+Global Rotation Quaternion: (0.00426642, -0.0157776, -0.429638, 0.902853) False
+Global Rotation EulerXYZ: (-0.00585645, -0.0321612, -0.888405) False
+
+time: 63725050310.253998
+Global Translation: (-847.498, 915.52, 96.3866) False
+Global Rotation Quaternion: (0.00420701, -0.0162122, -0.43162, 0.9019) False
+Global Rotation EulerXYZ: (-0.00640997, -0.0328812, -0.892816) False
+
+time: 63725050310.264999
+Global Translation: (-847.272, 915.488, 96.3537) False
+Global Rotation Quaternion: (0.0043309, -0.016321, -0.433193, 0.901143) False
+Global Rotation EulerXYZ: (-0.00633826, -0.0331733, -0.896307) False
+
+time: 63725050310.275009
+Global Translation: (-847.089, 915.472, 96.3564) False
+Global Rotation Quaternion: (0.00439811, -0.0163351, -0.434475, 0.900525) False
+Global Rotation EulerXYZ: (-0.0062767, -0.0332483, -0.899152) False
+
+time: 63725050310.284996
+Global Translation: (-846.936, 915.449, 96.369) False
+Global Rotation Quaternion: (0.00413046, -0.0162762, -0.436163, 0.899711) False
+Global Rotation EulerXYZ: (-0.00676939, -0.0328967, -0.902908) False
+
+time: 63725050310.294983
+Global Translation: (-846.809, 915.382, 96.3866) False
+Global Rotation Quaternion: (0.00419327, -0.0160685, -0.437989, 0.898827) False
+Global Rotation EulerXYZ: (-0.00654109, -0.0325646, -0.906961) False
+
+time: 63725050310.305000
+Global Translation: (-846.68, 915.309, 96.3944) False
+Global Rotation Quaternion: (0.00430468, -0.0155852, -0.439391, 0.89815) False
+Global Rotation EulerXYZ: (-0.00596654, -0.0317839, -0.910064) False
+
+time: 63725050310.313995
+Global Translation: (-846.54, 915.219, 96.4311) False
+Global Rotation Quaternion: (0.00417474, -0.0152224, -0.440517, 0.897605) False
+Global Rotation EulerXYZ: (-0.00591982, -0.0310105, -0.912564) False
+
+time: 63725050310.325005
+Global Translation: (-846.398, 915.198, 96.3667) False
+Global Rotation Quaternion: (0.00403489, -0.0149145, -0.442115, 0.896825) False
+Global Rotation EulerXYZ: (-0.00595347, -0.0303239, -0.916118) False
+
+time: 63725050310.334991
+Global Translation: (-846.261, 915.18, 96.3223) False
+Global Rotation Quaternion: (0.00394108, -0.0148801, -0.444097, 0.895847) False
+Global Rotation EulerXYZ: (-0.006158, -0.0301655, -0.920542) False
+
+time: 63725050310.345009
+Global Translation: (-846.128, 915.149, 96.2847) False
+Global Rotation Quaternion: (0.0039391, -0.0147655, -0.445655, 0.895074) False
+Global Rotation EulerXYZ: (-0.00611186, -0.0299479, -0.92402) False
+
+time: 63725050310.355995
+Global Translation: (-845.982, 915.142, 96.2606) False
+Global Rotation Quaternion: (0.0037748, -0.0149519, -0.446957, 0.894423) False
+Global Rotation EulerXYZ: (-0.00661618, -0.0301255, -0.926939) False
+
+time: 63725050310.365005
+Global Translation: (-845.824, 915.111, 96.2562) False
+Global Rotation Quaternion: (0.00366671, -0.0151229, -0.448566, 0.893614) False
+Global Rotation EulerXYZ: (-0.00701729, -0.0303223, -0.930548) False
+
+time: 63725050310.374992
+Global Translation: (-845.727, 915.003, 96.28) False
+Global Rotation Quaternion: (0.00358656, -0.0153321, -0.450564, 0.892605) False
+Global Rotation EulerXYZ: (-0.00741691, -0.0306077, -0.935032) False
+
+time: 63725050310.384995
+Global Translation: (-845.596, 914.929, 96.3093) False
+Global Rotation Quaternion: (0.00383204, -0.0155779, -0.452123, 0.891812) False
+Global Rotation EulerXYZ: (-0.00725495, -0.0312553, -0.938531) False
+
+time: 63725050310.395004
+Global Translation: (-845.452, 914.908, 96.3121) False
+Global Rotation Quaternion: (0.00382416, -0.0159182, -0.45335, 0.891182) False
+Global Rotation EulerXYZ: (-0.00762089, -0.0318448, -0.941297) False
+
+time: 63725050310.405014
+Global Translation: (-845.28, 914.89, 96.3199) False
+Global Rotation Quaternion: (0.0038652, -0.0160812, -0.454784, 0.890448) False
+Global Rotation EulerXYZ: (-0.00774746, -0.0321601, -0.944523) False
+
+time: 63725050310.415001
+Global Translation: (-845.144, 914.843, 96.293) False
+Global Rotation Quaternion: (0.00380624, -0.0162257, -0.456564, 0.889534) False
+Global Rotation EulerXYZ: (-0.00804889, -0.0323479, -0.948532) False
+
+time: 63725050310.424988
+Global Translation: (-845, 914.807, 96.2346) False
+Global Rotation Quaternion: (0.00377389, -0.0159045, -0.458205, 0.888696) False
+Global Rotation EulerXYZ: (-0.00787139, -0.0317322, -0.952213) False
+
+time: 63725050310.434006
+Global Translation: (-844.84, 914.787, 96.2015) False
+Global Rotation Quaternion: (0.00345478, -0.0154751, -0.459318, 0.88813) False
+Global Rotation EulerXYZ: (-0.00808327, -0.0306662, -0.95471) False
+
+time: 63725050310.445007
+Global Translation: (-844.718, 914.752, 96.237) False
+Global Rotation Quaternion: (0.00323837, -0.0152645, -0.460413, 0.887568) False
+Global Rotation EulerXYZ: (-0.00831122, -0.030083, -0.957171) False
+
+time: 63725050310.455002
+Global Translation: (-844.624, 914.666, 96.2385) False
+Global Rotation Quaternion: (0.00324709, -0.0147237, -0.461793, 0.88686) False
+Global Rotation EulerXYZ: (-0.00784261, -0.0291189, -0.960263) False
+
+time: 63725050310.464996
+Global Translation: (-844.489, 914.598, 96.1933) False
+Global Rotation Quaternion: (0.00359848, -0.0144905, -0.463382, 0.886033) False
+Global Rotation EulerXYZ: (-0.00705561, -0.0290172, -0.963835) False
+
+time: 63725050310.475006
+Global Translation: (-844.318, 914.557, 96.1931) False
+Global Rotation Quaternion: (0.00367394, -0.0141316, -0.464561, 0.885421) False
+Global Rotation EulerXYZ: (-0.00662672, -0.0284422, -0.966484) False
+
+time: 63725050310.485001
+Global Translation: (-844.166, 914.557, 96.2147) False
+Global Rotation Quaternion: (0.00350339, -0.0141787, -0.465732, 0.884805) False
+Global Rotation EulerXYZ: (-0.0070102, -0.0283578, -0.969135) False
+
+time: 63725050310.495010
+Global Translation: (-844.039, 914.574, 96.1921) False
+Global Rotation Quaternion: (0.00352459, -0.0145104, -0.467048, 0.884106) False
+Global Rotation EulerXYZ: (-0.00732505, -0.0289538, -0.972123) False
+
+time: 63725050310.504997
+Global Translation: (-843.866, 914.549, 96.1434) False
+Global Rotation Quaternion: (0.00376108, -0.0152371, -0.469009, 0.883054) False
+Global Rotation EulerXYZ: (-0.00765385, -0.0304431, -0.976585) False
+
+time: 63725050310.514999
+Global Translation: (-843.669, 914.479, 96.1151) False
+Global Rotation Quaternion: (0.0039972, -0.0154253, -0.470764, 0.882116) False
+Global Rotation EulerXYZ: (-0.00747504, -0.0309823, -0.980563) False
+
+time: 63725050310.525002
+Global Translation: (-843.503, 914.446, 96.1111) False
+Global Rotation Quaternion: (0.00407934, -0.0155595, -0.471976, 0.881464) False
+Global Rotation EulerXYZ: (-0.00749955, -0.031286, -0.983318) False
+
+time: 63725050310.534988
+Global Translation: (-843.364, 914.428, 96.1546) False
+Global Rotation Quaternion: (0.00406828, -0.0155668, -0.473179, 0.880819) False
+Global Rotation EulerXYZ: (-0.00756867, -0.0312782, -0.986049) False
+
+time: 63725050310.545006
+Global Translation: (-843.288, 914.368, 96.1431) False
+Global Rotation Quaternion: (0.00393159, -0.0153677, -0.474849, 0.879924) False
+Global Rotation EulerXYZ: (-0.00767935, -0.0307834, -0.989839) False
+
+time: 63725050310.555008
+Global Translation: (-843.178, 914.308, 96.1112) False
+Global Rotation Quaternion: (0.00405643, -0.01505, -0.476439, 0.879069) False
+Global Rotation EulerXYZ: (-0.00721243, -0.0303299, -0.993441) False
+
+time: 63725050310.565010
+Global Translation: (-843.049, 914.27, 96.0669) False
+Global Rotation Quaternion: (0.00401491, -0.0148793, -0.477743, 0.878364) False
+Global Rotation EulerXYZ: (-0.00716718, -0.0299796, -0.996405) False
+
+time: 63725050310.574989
+Global Translation: (-842.91, 914.25, 96.0548) False
+Global Rotation Quaternion: (0.00363668, -0.0147795, -0.478868, 0.877755) False
+Global Rotation EulerXYZ: (-0.00777408, -0.0294328, -0.998971) False
+
+time: 63725050310.584000
+Global Translation: (-842.818, 914.218, 96.0288) False
+Global Rotation Quaternion: (0.00354545, -0.0147214, -0.480499, 0.876864) False
+Global Rotation EulerXYZ: (-0.00793299, -0.0292287, -1.00269) False
+
+time: 63725050310.593994
+Global Translation: (-842.716, 914.127, 96.0063) False
+Global Rotation Quaternion: (0.00375097, -0.0147806, -0.482309, 0.875868) False
+Global Rotation EulerXYZ: (-0.0076903, -0.0295142, -1.00682) False
+
+time: 63725050310.603989
+Global Translation: (-842.579, 914.041, 96.0121) False
+Global Rotation Quaternion: (0.00376976, -0.0148017, -0.483895, 0.874993) False
+Global Rotation EulerXYZ: (-0.0077313, -0.0295553, -1.01044) False
+
+time: 63725050310.612991
+Global Translation: (-842.434, 914.003, 96.041) False
+Global Rotation Quaternion: (0.00356983, -0.0144941, -0.484824, 0.874484) False
+Global Rotation EulerXYZ: (-0.00781395, -0.0288151, -1.01256) False
+
+time: 63725050310.625000
+Global Translation: (-842.32, 913.946, 96.0453) False
+Global Rotation Quaternion: (0.00351445, -0.0144616, -0.486176, 0.873734) False
+Global Rotation EulerXYZ: (-0.00792375, -0.0286924, -1.01565) False
+
+time: 63725050310.636002
+Global Translation: (-842.202, 913.84, 96.0468) False
+Global Rotation Quaternion: (0.00378485, -0.0146317, -0.488053, 0.872683) False
+Global Rotation EulerXYZ: (-0.00767953, -0.0292363, -1.01995) False
+
+time: 63725050310.645996
+Global Translation: (-842.041, 913.75, 96.0157) False
+Global Rotation Quaternion: (0.00389133, -0.0146422, -0.489629, 0.871799) False
+Global Rotation EulerXYZ: (-0.0075569, -0.0293449, -1.02357) False
+
+time: 63725050310.654999
+Global Translation: (-841.85, 913.705, 95.9462) False
+Global Rotation Quaternion: (0.00359225, -0.0143278, -0.490925, 0.871076) False
+Global Rotation EulerXYZ: (-0.00781278, -0.0284921, -1.02654) False
+
+time: 63725050310.664993
+Global Translation: (-841.7, 913.668, 95.9109) False
+Global Rotation Quaternion: (0.00335404, -0.0141959, -0.492172, 0.870375) False
+Global Rotation EulerXYZ: (-0.00813839, -0.0280167, -1.0294) False
+
+time: 63725050310.675003
+Global Translation: (-841.58, 913.608, 95.8699) False
+Global Rotation Quaternion: (0.0034718, -0.0143632, -0.493653, 0.869533) False
+Global Rotation EulerXYZ: (-0.00814655, -0.0284101, -1.03281) False
+
+time: 63725050310.684990
+Global Translation: (-841.457, 913.53, 95.8263) False
+Global Rotation Quaternion: (0.00353328, -0.0142802, -0.49512, 0.8687) False
+Global Rotation EulerXYZ: (-0.00800541, -0.028313, -1.03618) False
+
+time: 63725050310.695007
+Global Translation: (-841.305, 913.45, 95.7936) False
+Global Rotation Quaternion: (0.00332928, -0.0138678, -0.496344, 0.868009) False
+Global Rotation EulerXYZ: (-0.00798982, -0.0273831, -1.03899) False
+
+time: 63725050310.705002
+Global Translation: (-841.144, 913.393, 95.8118) False
+Global Rotation Quaternion: (0.00294763, -0.0137641, -0.497551, 0.86732) False
+Global Rotation EulerXYZ: (-0.00858677, -0.0268121, -1.04178) False
+
+time: 63725050310.716003
+Global Translation: (-841.032, 913.314, 95.8408) False
+Global Rotation Quaternion: (0.00266403, -0.0136411, -0.498948, 0.866521) False
+Global Rotation EulerXYZ: (-0.00899873, -0.026302, -1.045) False
+
+time: 63725050310.724998
+Global Translation: (-840.953, 913.17, 95.8825) False
+Global Rotation Quaternion: (0.00301834, -0.0137805, -0.500509, 0.865616) False
+Global Rotation EulerXYZ: (-0.00857234, -0.026882, -1.0486) False
+
+time: 63725050310.735001
+Global Translation: (-840.804, 913.1, 95.836) False
+Global Rotation Quaternion: (0.00304009, -0.0138668, -0.501978, 0.864764) False
+Global Rotation EulerXYZ: (-0.008667, -0.0270384, -1.052) False
+
+time: 63725050310.743996
+Global Translation: (-840.636, 913.06, 95.8485) False
+Global Rotation Quaternion: (0.00294724, -0.0139895, -0.503378, 0.863948) False
+Global Rotation EulerXYZ: (-0.00899496, -0.0271429, -1.05525) False
+
+time: 63725050310.755005
+Global Translation: (-840.475, 913.016, 95.8756) False
+Global Rotation Quaternion: (0.0028756, -0.0144036, -0.505037, 0.862973) False
+Global Rotation EulerXYZ: (-0.00958941, -0.0277679, -1.05911) False
+
+time: 63725050310.764999
+Global Translation: (-840.346, 912.969, 95.7896) False
+Global Rotation Quaternion: (0.00289438, -0.0144551, -0.506825, 0.861923) False
+Global Rotation EulerXYZ: (-0.00966686, -0.0278559, -1.06326) False
+
+time: 63725050310.775993
+Global Translation: (-840.18, 912.947, 95.6964) False
+Global Rotation Quaternion: (0.00315518, -0.0145152, -0.50845, 0.860963) False
+Global Rotation EulerXYZ: (-0.00933137, -0.0282064, -1.06703) False
+
+time: 63725050310.785011
+Global Translation: (-840.051, 912.943, 95.667) False
+Global Rotation Quaternion: (0.00281124, -0.0143627, -0.509702, 0.860227) False
+Global Rotation EulerXYZ: (-0.0098087, -0.0275797, -1.06994) False
+
+time: 63725050310.794998
+Global Translation: (-839.91, 912.924, 95.6946) False
+Global Rotation Quaternion: (0.00273005, -0.0143159, -0.51116, 0.859362) False
+Global Rotation EulerXYZ: (-0.00994715, -0.0273995, -1.07333) False
+
+time: 63725050310.804993
+Global Translation: (-839.812, 912.82, 95.6648) False
+Global Rotation Quaternion: (0.00287435, -0.014073, -0.512863, 0.85835) False
+Global Rotation EulerXYZ: (-0.00950432, -0.0271108, -1.07728) False
+
+time: 63725050310.814995
+Global Translation: (-839.688, 912.714, 95.6591) False
+Global Rotation Quaternion: (0.00292962, -0.0139116, -0.51446, 0.857397) False
+Global Rotation EulerXYZ: (-0.00929367, -0.026873, -1.081) False
+
+time: 63725050310.824997
+Global Translation: (-839.55, 912.684, 95.6531) False
+Global Rotation Quaternion: (0.0027377, -0.0136762, -0.515851, 0.856565) False
+Global Rotation EulerXYZ: (-0.00942315, -0.0262567, -1.08424) False
+
+time: 63725050310.835007
+Global Translation: (-839.405, 912.63, 95.6773) False
+Global Rotation Quaternion: (0.00240142, -0.0137218, -0.517083, 0.855822) False
+Global Rotation EulerXYZ: (-0.0100838, -0.0259732, -1.08713) False
+
+time: 63725050310.845001
+Global Translation: (-839.327, 912.508, 95.683) False
+Global Rotation Quaternion: (0.00249608, -0.0136579, -0.518569, 0.854923) False
+Global Rotation EulerXYZ: (-0.00990069, -0.0259445, -1.0906) False
+
+time: 63725050310.855003
+Global Translation: (-839.246, 912.396, 95.6674) False
+Global Rotation Quaternion: (0.00297968, -0.0137289, -0.519986, 0.854059) False
+Global Rotation EulerXYZ: (-0.0091914, -0.0265525, -1.09391) False
+
+time: 63725050310.864990
+Global Translation: (-839.115, 912.33, 95.66) False
+Global Rotation Quaternion: (0.00316057, -0.0134467, -0.521075, 0.853399) False
+Global Rotation EulerXYZ: (-0.00862205, -0.0262475, -1.09645) False
+
+time: 63725050310.875000
+Global Translation: (-838.979, 912.323, 95.6719) False
+Global Rotation Quaternion: (0.00291682, -0.0133483, -0.522138, 0.852752) False
+Global Rotation EulerXYZ: (-0.00896779, -0.0258145, -1.09894) False
+
+time: 63725050310.883987
+Global Translation: (-838.844, 912.321, 95.639) False
+Global Rotation Quaternion: (0.00283508, -0.0133977, -0.523395, 0.85198) False
+Global Rotation EulerXYZ: (-0.00919688, -0.0257997, -1.10189) False
+
+time: 63725050310.893997
+Global Translation: (-838.733, 912.186, 95.6135) False
+Global Rotation Quaternion: (0.0028203, -0.0131142, -0.525008, 0.850992) False
+Global Rotation EulerXYZ: (-0.00897296, -0.0252841, -1.10567) False
+
+time: 63725050310.904999
+Global Translation: (-838.579, 912.128, 95.5436) False
+Global Rotation Quaternion: (0.00279129, -0.0130804, -0.526349, 0.850163) False
+Global Rotation EulerXYZ: (-0.00902661, -0.025182, -1.10883) False
+
+time: 63725050310.915009
+Global Translation: (-838.396, 912.109, 95.4887) False
+Global Rotation Quaternion: (0.0026765, -0.0127222, -0.527593, 0.849398) False
+Global Rotation EulerXYZ: (-0.00888025, -0.0244391, -1.11174) False
+
+time: 63725050310.924995
+Global Translation: (-838.27, 912.064, 95.5123) False
+Global Rotation Quaternion: (0.00235427, -0.0128911, -0.528642, 0.848743) False
+Global Rotation EulerXYZ: (-0.0096362, -0.0243739, -1.11423) False
+
+time: 63725050310.934998
+Global Translation: (-838.164, 911.979, 95.5052) False
+Global Rotation Quaternion: (0.00231645, -0.0131322, -0.530165, 0.847789) False
+Global Rotation EulerXYZ: (-0.01, -0.0247255, -1.11783) False
+
+time: 63725050310.945000
+Global Translation: (-838.058, 911.858, 95.5318) False
+Global Rotation Quaternion: (0.00253195, -0.0130269, -0.531559, 0.846918) False
+Global Rotation EulerXYZ: (-0.00956347, -0.0247597, -1.12111) False
+
+time: 63725050310.955002
+Global Translation: (-837.906, 911.787, 95.5271) False
+Global Rotation Quaternion: (0.00255243, -0.0127825, -0.532618, 0.846256) False
+Global Rotation EulerXYZ: (-0.00929926, -0.0243559, -1.1236) False
+
+time: 63725050310.963997
+Global Translation: (-837.79, 911.718, 95.5722) False
+Global Rotation Quaternion: (0.00214168, -0.0123728, -0.533663, 0.845604) False
+Global Rotation EulerXYZ: (-0.00958655, -0.023213, -1.12606) False
+
+time: 63725050310.974991
+Global Translation: (-837.7, 911.602, 95.6113) False
+Global Rotation Quaternion: (0.00201355, -0.0126229, -0.535137, 0.844669) False
+Global Rotation EulerXYZ: (-0.0101113, -0.0234815, -1.12956) False
+
+time: 63725050310.985008
+Global Translation: (-837.62, 911.48, 95.591) False
+Global Rotation Quaternion: (0.00221792, -0.0124298, -0.536686, 0.843687) False
+Global Rotation EulerXYZ: (-0.00960207, -0.0233565, -1.13322) False
+
+time: 63725050310.995010
+Global Translation: (-837.451, 911.427, 95.5458) False
+Global Rotation Quaternion: (0.0022264, -0.0123976, -0.538022, 0.842837) False
+Global Rotation EulerXYZ: (-0.00959016, -0.0232962, -1.13639) False
+
+time: 63725050311.004990
+Global Translation: (-837.291, 911.407, 95.5203) False
+Global Rotation Quaternion: (0.002037, -0.0123403, -0.539112, 0.842142) False
+Global Rotation EulerXYZ: (-0.00987751, -0.022983, -1.13898) False
+
+time: 63725050311.014992
+Global Translation: (-837.165, 911.406, 95.455) False
+Global Rotation Quaternion: (0.00194279, -0.0126559, -0.540442, 0.841284) False
+Global Rotation EulerXYZ: (-0.0104137, -0.0233965, -1.14215) False
+
+time: 63725050311.024994
+Global Translation: (-837.064, 911.319, 95.409) False
+Global Rotation Quaternion: (0.00196101, -0.0124234, -0.542082, 0.840231) False
+Global Rotation EulerXYZ: (-0.0101764, -0.0230051, -1.14605) False
+
+time: 63725050311.036003
+Global Translation: (-836.91, 911.234, 95.3231) False
+Global Rotation Quaternion: (0.00201591, -0.012792, -0.543839, 0.839089) False
+Global Rotation EulerXYZ: (-0.0105336, -0.0236621, -1.15024) False
+
+time: 63725050311.044998
+Global Translation: (-836.728, 911.145, 95.3083) False
+Global Rotation Quaternion: (0.00198075, -0.0129312, -0.545499, 0.83801) False
+Global Rotation EulerXYZ: (-0.0107914, -0.0238362, -1.15421) False
+
+time: 63725050311.055000
+Global Translation: (-836.609, 911.037, 95.3551) False
+Global Rotation Quaternion: (0.00164817, -0.0126543, -0.546879, 0.837115) False
+Global Rotation EulerXYZ: (-0.0110845, -0.022991, -1.1575) False
+
+time: 63725050311.065002
+Global Translation: (-836.554, 910.912, 95.3971) False
+Global Rotation Quaternion: (0.00164893, -0.0125, -0.548355, 0.83615) False
+Global Rotation EulerXYZ: (-0.0109544, -0.0227141, -1.16102) False
+
+time: 63725050311.075005
+Global Translation: (-836.483, 910.777, 95.4299) False
+Global Rotation Quaternion: (0.00170857, -0.0125522, -0.550085, 0.835013) False
+Global Rotation EulerXYZ: (-0.0109593, -0.0228442, -1.16516) False
+
+time: 63725050311.084991
+Global Translation: (-836.334, 910.684, 95.4359) False
+Global Rotation Quaternion: (0.00154856, -0.012415, -0.551413, 0.834139) False
+Global Rotation EulerXYZ: (-0.0111112, -0.0224213, -1.16834) False
+
+time: 63725050311.095001
+Global Translation: (-836.164, 910.605, 95.3823) False
+Global Rotation Quaternion: (0.0013967, -0.0120354, -0.553056, 0.833056) False
+Global Rotation EulerXYZ: (-0.0109882, -0.0215989, -1.17227) False
+
+time: 63725050311.104996
+Global Translation: (-836.034, 910.532, 95.3165) False
+Global Rotation Quaternion: (0.00145348, -0.0119566, -0.554674, 0.831981) False
+Global Rotation EulerXYZ: (-0.0108482, -0.0215094, -1.17616) False
+
+time: 63725050311.116013
+Global Translation: (-835.891, 910.466, 95.2564) False
+Global Rotation Quaternion: (0.00172879, -0.0118437, -0.556116, 0.831018) False
+Global Rotation EulerXYZ: (-0.0103022, -0.0216092, -1.17962) False
+
+time: 63725050311.140991
+Global Translation: (-835.612, 910.295, 95.2946) False
+Global Rotation Quaternion: (0.00162047, -0.0114804, -0.558788, 0.829229) False
+Global Rotation EulerXYZ: (-0.0101451, -0.0208523, -1.18604) False

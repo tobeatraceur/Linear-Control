@@ -21,14 +21,19 @@ classdef Controller
             obj.thetaFix = fix;
         end
 
-        function [v_1, v_2] = update(obj, trans, rotation, target)
+        function [v_1, v_2] = update(obj, trans, rotation, target, obstacles)
+            % Argument trans is the object's translation.
+            % Argument rotation is the object's rotation angle in x-y plane.
+            % Argument target is the target translation for this object.
+            % Argument obstacles is an array of translations, each of which 
+            % stands for an obstacle.
 
             obj.x(end + 1) = trans(1);
             obj.y(end + 1) = trans(2);
             x_T = target(1);
             y_T = target(2);
 
-            obj.theta(end + 1) = rotation(3) + obj.thetaFix;
+            obj.theta(end + 1) = rotation + obj.thetaFix;
 
             v_d = 0.5 * sqrt((obj.x(end) - x_T)^2 + ( obj.y(end) - y_T )^2);
             theta_dtheta = atan2((y_T - obj.y(end)), (x_T - obj.x(end)));

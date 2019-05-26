@@ -1,6 +1,7 @@
 classdef VData
     properties
         MyClient;
+        data;
     end
 
     methods
@@ -97,6 +98,42 @@ classdef VData
 
             end% SubjectIndex
 
+            obj.data = output;
+
+        end
+
+        function translation = get_translation(obj, name)
+            if isKey(data, name)
+                segment = data(name);
+                translation = segment('GlobalTranslation').Translation;
+            else
+                error('Object %s does not exist!', name)
+            end
+        end
+
+        function obstacles = get_obstacles(obj, name)
+            if isKey(data, name)
+                obstacles = [];
+                for k = data.keys()
+                    if k ~= name
+                        obstacle = data(k{1});
+                        obstacles = [obstacles;...
+                            obstacle.('GlobalTranslation').Translation]
+                    end
+                end
+            else
+                error('Object %s does not exist!', name)
+            end
+        end
+
+        function [angle, rotation] = get_rotation(obj, name)
+            if isKey(data, name)
+                segment = data(name);
+                rotation = segment('GlobalEuler').Rotation;
+                angle = rotation(3);
+            else
+                error('Object %s does not exist!', name)
+            end
         end
 
         function close_client(obj)
