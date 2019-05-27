@@ -5,6 +5,7 @@ classdef Controller
         y;
         theta;
         thetaFix;
+        lastTime;
 
         K_w_theta = 5;
 		K_w = 0.5;
@@ -25,6 +26,7 @@ classdef Controller
 
         function obj = Controller(fix)
             obj.thetaFix = fix;			
+            obj.lastTime = now;
         end
 
         function [v_1, v_2] = update(obj, trans, rotation, target, obstacles, dt)
@@ -55,6 +57,7 @@ classdef Controller
 
             %v_d = 0.5 * sqrt((obj.x(end) - x_T)^2 + ( obj.y(end) - y_T )^2);
             %theta_dtheta = atan2((y_T - obj.y(end)), (x_T - obj.x(end)));
+
             v_d = sqrt(Grad(1)^2 + Grad(2)^2);
             theta_dtheta = atan2(-Grad(2), -Grad(1));
             
@@ -64,6 +67,9 @@ classdef Controller
             %theta_e = theta_dtheta - obj.theta(end);
             %v = v_d * cos(theta_e) + obj.K_1 * x_e;
             %w = w_d + obj.K_4 * v_d * y_e + obj.K_2 * sin(obj.theta(end));
+
+            dt = (now - obj.lastTime) * 60 * 60 * 24
+            obj.lastTime = now;
 			v = dt/(T_v+dt) * (K_v*v_d + (T_v - K_v*dt)/dt * v_last);
 			w = dt/(T_w+dt) * (K_w*w_d + (T_w - K_w*dt)/dt * w_last);
 			
