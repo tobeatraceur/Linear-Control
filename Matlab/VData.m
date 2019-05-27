@@ -1,4 +1,4 @@
-classdef VData
+classdef VData < handle
     properties
         MyClient;
         data;
@@ -9,12 +9,10 @@ classdef VData
             % Class constructor
 
             % Program options
-%             TransmitMulticast = false;
-%             EnableHapticFeedbackTest = false;
-%             HapticOnList = {'ViconAP_001';'ViconAP_002'};
-%             bReadCentroids = false;
-
-            obj.data = containers.Map;
+            TransmitMulticast = false;
+            EnableHapticFeedbackTest = false;
+            HapticOnList = {'ViconAP_001';'ViconAP_002'};
+            bReadCentroids = false;
 
             % Load the SDK
             fprintf( 'Loading SDK...' );
@@ -30,9 +28,7 @@ classdef VData
             % Connect to a server
             while ~obj.MyClient.IsConnected().Connected
                 obj.MyClient.Connect( HostName );
-                % fprintf( '.' );
             end
-            fprintf( '\n' );
 
             % Enable some different data types
             obj.MyClient.EnableSegmentData();
@@ -53,11 +49,8 @@ classdef VData
             obj.data = containers.Map;
 
             % Get a frame
-            % fprintf( 'Waiting for new frame...' );
             while obj.MyClient.GetFrame().Result.Value ~= Result.Success
-                % fprintf( '.' );
             end
-            % fprintf( '\n' );  
 
             % Count the number of subjects
             SubjectCount = obj.MyClient.GetSubjectCount().SubjectCount;

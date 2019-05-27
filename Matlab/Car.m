@@ -13,9 +13,9 @@ classdef Car
          end
 
          function command = set_speed(obj, speed)
-             if(sum(speed.^2) > MAX_SPEED^2)
+             if(sum(speed.^2) > 2 * obj.MAX_SPEED^2)
                  disp('speed too high!!');
-                 speed = speed * MAX_SPEED^2 / sum(speed.^2)
+                 speed = speed * sqrt (2 * obj.MAX_SPEED^2 / sum(speed.^2))
              end
              command = sprintf('{333%+03d%+03d}', round(speed));
              disp(['command: ', command]);

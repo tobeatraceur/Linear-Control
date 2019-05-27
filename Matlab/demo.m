@@ -13,7 +13,7 @@ car2 = Car('btspp://ABAFC2563402', 1);
 disp('Connect to car2')
 
 % Open file
-filename = 'group1';
+filename = 'endGame';
 dateString = strsplit(char(datetime));
 outputFile = fopen(['../ViconData/', filename, '.txt'], 'w');
 
@@ -21,8 +21,6 @@ outputFile = fopen(['../ViconData/', filename, '.txt'], 'w');
 fprintf(outputFile, 'Log time: %s\n\n', char(datetime()));
 
 %% Control
-% A dialog to stop the loop
-MessageBox = msgbox( 'Stop demo');
 
 speedFix = 12.7;
 
@@ -33,7 +31,7 @@ car1.set_speed([5, 5]);
 car2.set_speed([5, 5]);
 
 for i = 1: test_point_num
-    vicon = vicon.read_data();
+    vicon.read_data();
     trans1 = vicon.get_translation('car1');
     test_x1(i) = trans1(1);
     test_y1(i) = trans1(2);
@@ -44,10 +42,10 @@ for i = 1: test_point_num
 
     fprintf(outputFile, 'car1 translation: %10.6f %10.6f %10.6f\n', ...
         vicon.get_translation('car1'));
-    fprintf(outputFile, 'car1 translation: %10.6f %10.6f %10.6f\n', ...
+    fprintf(outputFile, 'car2 translation: %10.6f %10.6f %10.6f\n', ...
         vicon.get_translation('car2'));
 end
-
+% 
 kandb = polyfit(test_x1(2:test_point_num), test_y1(2:test_point_num), 1);
 theta_bCar1 = atan2(kandb(1) * (test_x1(test_point_num) - test_x1(1)), ...
     test_x1(test_point_num) - test_x1(1));
@@ -60,16 +58,19 @@ theta_bCar2 = atan2(kandb(1) * (test_x2(test_point_num) - test_x2(1)), ...
 controllerCar1 = Controller(theta_bCar1 - vicon.get_rotation('car1'));
 controllerCar2 = Controller(theta_bCar2 - vicon.get_rotation('car2'));
 
+% A dialog to stop the loop
+MessageBox = msgbox( 'Stop demo');
+
 while ishandle( MessageBox )
     % Read data
-    vicon = vicon.read_data();
+    vicon.read_data();
 
-    [vl1, vr1] = controllerCar1.update(vicon.get_translation('car1'), ...
-        vicon.get_rotation('car1'), vicon.get_translation('car0') + [100; 100; 0], ...
+    [vl1, vr1, controllerCar1] = controllerCar1.update(vicon.get_translation('car1'), ...
+        vicon.get_rotation('car1'), vicon.get_translation('car0') + [250; 150; 0], ...
         vicon.get_obstacles('car1'));
 
-    [vl2, vr2] = controllerCar2.update(vicon.get_translation('car2'), ...
-        vicon.get_rotation('car2'), vicon.get_translation('car0') + [100; -100; 0], ...
+    [vl2, vr2, controllerCar2] = controllerCar2.update(vicon.get_translation('car2'), ...
+        vicon.get_rotation('car2'), vicon.get_translation('car0') + [250; -150; 0], ...
         vicon.get_obstacles('car2'));
     
     commandCar1 = car1.set_speed([vl1, vr1] / speedFix);
