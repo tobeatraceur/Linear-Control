@@ -41,11 +41,17 @@ for i = 1: test_point_num
     trans2 = vicon.get_translation('car2');
     test_x2(i) = trans2(1);
     test_y2(i) = trans2(2);
+
+    fprintf(outputFile, 'car1 translation: %10.6f %10.6f %10.6f\n', ...
+        vicon.get_translation('car1'));
+    fprintf(outputFile, 'car1 translation: %10.6f %10.6f %10.6f\n', ...
+        vicon.get_translation('car2'));
 end
 
 kandb = polyfit(test_x1(2:test_point_num), test_y1(2:test_point_num), 1);
 theta_bCar1 = atan2(kandb(1) * (test_x1(test_point_num) - test_x1(1)), ...
     test_x1(test_point_num) - test_x1(1));
+
 kandb = polyfit(test_x2(2:test_point_num), test_y2(2:test_point_num), 1);
 theta_bCar2 = atan2(kandb(1) * (test_x2(test_point_num) - test_x2(1)), ...
     test_x2(test_point_num) - test_x2(1));
@@ -57,15 +63,13 @@ controllerCar2 = Controller(theta_bCar2 - vicon.get_rotation('car2'));
 while ishandle( MessageBox )
     % Read data
     vicon = vicon.read_data();
-    %car1Data = data('car1');
-    %car2Data = data('car2');
 
     [vl1, vr1] = controllerCar1.update(vicon.get_translation('car1'), ...
-        vicon.get_rotation('car1'), vicon.get_translation('car0') + [100, 100], ...
+        vicon.get_rotation('car1'), vicon.get_translation('car0') + [100; 100; 0], ...
         vicon.get_obstacles('car1'));
 
     [vl2, vr2] = controllerCar2.update(vicon.get_translation('car2'), ...
-        vicon.get_rotation('car2'), vicon.get_translation('car0') + [100, -100], ...
+        vicon.get_rotation('car2'), vicon.get_translation('car0') + [100; -100; 0], ...
         vicon.get_obstacles('car2'));
     
     commandCar1 = car1.set_speed([vl1, vr1] / speedFix);
