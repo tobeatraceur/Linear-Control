@@ -7,19 +7,18 @@ classdef Car
 
      methods
          function obj = Car(name, channel)
-             % class constructor
+             % Class constructor
              obj.bluetooth = Bluetooth(name, channel);
              fopen(obj.bluetooth);
          end
 
          function command = set_speed(obj, speed)
-             if(any(abs(speed) > obj.MAX_SPEED))
+             if(sum(speed.^2) > MAX_SPEED^2)
                  disp('speed too high!!');
+                 speed = speed * MAX_SPEED^2 / sum(speed.^2)
              end
-             speed(speed > obj.MAX_SPEED) = obj.MAX_SPEED;
-             speed(speed < -obj.MAX_SPEED) = -obj.MAX_SPEED;
              command = sprintf('{333%+03d%+03d}', round(speed));
-             %disp(['command: ', command]);
+             disp(['command: ', command]);
              fprintf(obj.bluetooth, command);
          end
          
