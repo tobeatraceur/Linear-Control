@@ -9,10 +9,12 @@ classdef VData
             % Class constructor
 
             % Program options
-            TransmitMulticast = false;
-            EnableHapticFeedbackTest = false;
-            HapticOnList = {'ViconAP_001';'ViconAP_002'};
-            bReadCentroids = false;
+%             TransmitMulticast = false;
+%             EnableHapticFeedbackTest = false;
+%             HapticOnList = {'ViconAP_001';'ViconAP_002'};
+%             bReadCentroids = false;
+
+            obj.data = containers.Map;
 
             % Load the SDK
             fprintf( 'Loading SDK...' );
@@ -44,11 +46,11 @@ classdef VData
                 Direction.Up );    % Z-up
         end
 
-        function output = read_data(obj)
+        function obj = read_data(obj)
             % Output format: list of map, each map has these key:
             %'SubjectName', 'SegmentName', 'GlobalTranslation', 'GlobalQuaternion', 'GlobalEuler'
 
-            output = containers.Map;
+            obj.data = containers.Map;
 
             % Get a frame
             % fprintf( 'Waiting for new frame...' );
@@ -92,19 +94,16 @@ classdef VData
                         obj.MyClient.GetSegmentGlobalRotationEulerXYZ( SubjectName, SegmentName );
                     segmentData('GlobalEuler') = Output_GetSegmentGlobalRotationEulerXYZ;
 
-                    output(segmentData('SegmentName')) = segmentData;
+                    obj.data(segmentData('SegmentName')) = segmentData;
 
                 end% SegmentIndex
 
             end% SubjectIndex
-
-            obj.data = output;
-
         end
 
         function translation = get_translation(obj, name)
-            if isKey(data, name)
-                segment = data(name);
+            if isKey(obj.data, name)
+                segment = obj.data(name);
                 translation = segment('GlobalTranslation').Translation;
             else
                 error('Object %s does not exist!', name)
@@ -112,13 +111,13 @@ classdef VData
         end
 
         function obstacles = get_obstacles(obj, name)
-            if isKey(data, name)
+            if isKey(obj.data, name)
                 obstacles = [];
-                for k = data.keys()
-                    if k ~= name
-                        obstacle = data(k{1});
-                        obstacles = [obstacles;...
-                            obstacle.('GlobalTranslation').Translation]
+                for k = obj.data.keys()
+                    if ~ strcmp(k{1}, name)
+                        obstacle = obj.data(k{1});
+                        obstacleTranslation = obstacle('GlobalTranslation').Translation;
+                        obstacles = [obstacles; obstacleTranslation'];
                     end
                 end
             else
@@ -127,8 +126,8 @@ classdef VData
         end
 
         function [angle, rotation] = get_rotation(obj, name)
-            if isKey(data, name)
-                segment = data(name);
+            if isKey(obj.data, name)
+                segment = obj.data(name);
                 rotation = segment('GlobalEuler').Rotation;
                 angle = rotation(3);
             else

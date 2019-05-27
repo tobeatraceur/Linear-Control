@@ -19,7 +19,7 @@ classdef Car
              speed(speed > obj.MAX_SPEED) = obj.MAX_SPEED;
              speed(speed < -obj.MAX_SPEED) = -obj.MAX_SPEED;
              command = sprintf('{333%+03d%+03d}', round(speed));
-             disp(['command: ', command]);
+             %disp(['command: ', command]);
              fprintf(obj.bluetooth, command);
          end
          
