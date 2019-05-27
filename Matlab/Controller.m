@@ -10,10 +10,10 @@ classdef Controller
         K_1 = 3;
         K_2 = 0.3;
         K_4 = 0.001;
-        K_r = 5e7;
+        K_r = 1000000;
         
-        K_p = 0.1;
-        Repulsive_Distance = 600;
+        K_p = 0.2;
+        Repulsive_Distance = 200;
 
         L = 75.5;
 
@@ -39,13 +39,13 @@ classdef Controller
 
             obj.theta(end + 1) = rotation + obj.thetaFix;
             
-            % Obstacles avoidance
+            %Obstacles avoidance
             Grad = [2*obj.K_p*(obj.x(end)-x_T), 2*obj.K_p*(obj.y(end)-y_T)];
             for i = 1:size(obstacles,1)
                 x_R = obstacles(i,1);
                 y_R = obstacles(i,2);
                 if sqrt((obj.x(end)-x_R)^2 + (obj.y(end)-y_R)^2) < obj.Repulsive_Distance
-                    Grad = Grad + obj.K_r * [((obj.x(end)-x_R)^2 + (obj.y(end)-y_R)^2)^(-3/2)*(x_R-obj.x(end)),...
+                    Grad = Grad + [((obj.x(end)-x_R)^2 + (obj.y(end)-y_R)^2)^(-3/2)*(x_R-obj.x(end)),...
                         ((obj.x(end)-x_R)^2 + (obj.y(end)-y_R)^2)^(-3/2)*(y_R-obj.y(end))];        
                 end
             end
@@ -56,8 +56,8 @@ classdef Controller
             theta_dtheta = atan2(-Grad(2), -Grad(1));
             
             w_d = obj.K_w * (2 * pi * round((obj.theta(end) - theta_dtheta)/(2 * pi)) - obj.theta(end) + theta_dtheta);
-            x_e = cos(obj.theta(end) * (x_T - obj.x(end))) + sin(obj.theta(end) * (y_T - obj.y(end)));
-            y_e = - sin(obj.theta(end) * (x_T - obj.x(end))) + cos(obj.theta(end) * (y_T - obj.y(end)));
+            x_e = cos(obj.theta(end)) * (x_T - obj.x(end)) + sin(obj.theta(end)) * (y_T - obj.y(end));
+            y_e = - sin(obj.theta(end)) * (x_T - obj.x(end)) + cos(obj.theta(end)) * (y_T - obj.y(end));
             theta_e = theta_dtheta - obj.theta(end);
             v = v_d * cos(theta_e) + obj.K_1 * x_e;
             w = w_d + obj.K_4 * v_d * y_e + obj.K_2 * sin(obj.theta(end));
