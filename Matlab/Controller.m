@@ -125,7 +125,7 @@ classdef Controller
                 obj.v1_last = v1;
                 obj.v2_last = v2;
                 
-                obj.v1_e_last = v1_e;
+                obj.v1_e_last = v1_e; 
                 obj.v2_e_last = v2_e;
             end
             
