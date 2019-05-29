@@ -1,6 +1,5 @@
 classdef Controller
     % TODO: try handler class
-    
     properties
         x;
         y;
