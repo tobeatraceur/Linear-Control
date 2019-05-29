@@ -1,4 +1,5 @@
 classdef Controller
+    % TODO: try handler class
 
     properties
         x;
@@ -41,7 +42,7 @@ classdef Controller
             obj.v2_e_last = 0;
         end
 
-        function [v1, v2, obj] = update(obj, trans, rotation, target, obstacles)
+        function [v1, v2, obj] = update(obj, trans, rotation, target, targetTheta, obstacles)
             % Argument trans is the object's translation.
             % Argument rotation is the object's rotation angle in x-y plane.
             % Argument target is the target translation for this object.
