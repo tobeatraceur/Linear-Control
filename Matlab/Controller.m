@@ -25,7 +25,7 @@ classdef Controller
         
         K_p = 0.3;
         Repulsive_Distance = 400;
-        
+        Direction_Strength = 2;
         L = 75.5;
         
     end
@@ -58,24 +58,8 @@ classdef Controller
             if((x_T - trans(1))^2 + (y_T - trans(2))^2  < 8e3)
                 deta_theta = targetTheta - obj.theta(end);
                 deta_theta = mod(deta_theta, 2*pi);
-                if abs(deta_theta) < 0.5
-                    v1 = 0;
-                    v2 = 0;
-                else
-                    if deta_theta > pi
-                        deta_theta = deta_theta - 2*pi;
-                    elseif deta_theta < -pi
-                        deta_theta = deta_theta + 2*pi;
-                    end
-                    
-                    if(deta_theta > 0)
-                        v1 = 5;
-                        v2 = -5;
-                    else
-                        v1 = -5;
-                        v2 = 5;
-                    end
-                end
+                v1 = 0;
+                v2 = 0;
                 obj.v1_last = v1;
                 obj.v2_last = v2;
                 
@@ -84,7 +68,9 @@ classdef Controller
                 
             else
                 % Obstacles avoidance
-                Grad = [2*obj.K_p*(obj.x(end)-x_T), 2*obj.K_p*(obj.y(end)-y_T)];
+                %Grad = [2*obj.K_p*(obj.x(end)-x_T), 2*obj.K_p*(obj.y(end)-y_T)];
+                Grad = [2*(obj.x(end)-x_T)*(cos(targetTheta)^2+obj.Direction_Strength*sin(targetTheta)^2)+2*(obj.y(end)-y_T)*(1-obj.Direction_Strength)*sin(targetTheta)*cos(targetTheta),
+                    2*(obj.y(end)-y_T)*(sin(targetTheta)^2+obj.Direction_Strength*cos(targetTheta)^2)+2*(obj.x(end)-x_T)*(1-obj.Direction_Strength)*sin(targetTheta)*cos(targetTheta)];
                 for i = 1:size(obstacles,1)
                     x_R = obstacles(i,1);
                     y_R = obstacles(i,2);
