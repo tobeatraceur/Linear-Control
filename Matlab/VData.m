@@ -2,11 +2,21 @@ classdef VData < handle
     properties
         MyClient;
         data;
+        fig;
+        ax;
+        history;
     end
 
     methods
         function obj = VData()
             % Class constructor
+
+            % Initialize figure
+            obj.fig = figure();
+            obj.ax = axes('Parent', fig);
+
+            % Initialize history
+            obj.history = containers.Map;
 
             % Program options
             TransmitMulticast = false;
@@ -92,6 +102,9 @@ classdef VData < handle
                 end% SegmentIndex
 
             end% SubjectIndex
+
+            % Update history
+            obj.update_history();
         end
 
         function translation = get_translation(obj, name)
@@ -137,6 +150,45 @@ classdef VData < handle
             Client.UnloadViconDataStreamSDK();
             fprintf( 'done\n' );
         end
+
+        function update_history(obj)
+            for k = obj.data.keys()
+                object = obj.data(k{1});
+                objectTranlation = object('GlobalTranslation').Translation;
+
+                if ~isKey(obj.history, k{1})
+                    obj.history(k) = [];
+                end
+
+                obj.history(k{1}) = [obj.history(k{1}); objectTranlation];
+
+            end
+        end
+
+        function update_trajectory(obj)
+
+            cla(obj.ax);
+            hold on;
+
+            for k = obj.data.keys()
+                his= obj.history(k{1});
+                x = his(1:end, 1);
+                y = his(1:end, 2);
+
+                % Draw only recent trajectory
+                if length(x) > 50
+                    x = x(end-49 : end);
+                    y = y(end-49 : end);
+                end
+
+                plot(obj.ax, x, y);
+                axis([-2000 2000 -2000 2000]); % TODO: Use the right area size.
+            end
+            hold off;
+            drawnow;
+
+        end
+
     end
 
 end

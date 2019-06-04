@@ -95,7 +95,9 @@ MessageBox = msgbox( 'Stop demo');
 
 while ishandle( MessageBox )
     % Read data
+	tic;
     vicon.read_data();
+    vicon.update_trajectory();
 
     [vl1, vr1, controllerCar1] = controllerCar1.update( ...
         vicon.get_translation('car1'), ...
@@ -137,7 +139,12 @@ while ishandle( MessageBox )
 
     fprintf(outputFile, '\n\n');
     
-    pause(0.09)
+	runTime = toc;
+	if runTime < 0.1
+		pause(0.1 - runTime)
+	else
+		warning('Slow loop!')
+	end
 end
 
 disp('End control')
