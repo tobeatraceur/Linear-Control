@@ -69,8 +69,8 @@ classdef Controller
             else
                 % Obstacles avoidance
                 %Grad = [2*obj.K_p*(obj.x(end)-x_T), 2*obj.K_p*(obj.y(end)-y_T)];
-                Grad = [2*(obj.x(end)-x_T)*(cos(targetTheta)^2+obj.Direction_Strength*sin(targetTheta)^2)+2*(obj.y(end)-y_T)*(1-obj.Direction_Strength)*sin(targetTheta)*cos(targetTheta),
-                    2*(obj.y(end)-y_T)*(sin(targetTheta)^2+obj.Direction_Strength*cos(targetTheta)^2)+2*(obj.x(end)-x_T)*(1-obj.Direction_Strength)*sin(targetTheta)*cos(targetTheta)];
+                Grad = [2*obj.K_p*(obj.Direction_Strength*sin(targetTheta)^2*(obj.x(end)-x_T)-(obj.Direction_Strength-1)*sin(targetTheta)*cos(targetTheta)*(obj.y(end)-y_T)+cos(targetTheta)^2*(obj.x(end)-x_T))/obj.Direction_Strength,
+                    2*obj.K_p*(obj.Direction_Strength*cos(targetTheta)^2*(obj.y(end)-y_T)-(obj.Direction_Strength-1)*sin(targetTheta)*cos(targetTheta)*(obj.x(end)-x_T)+sin(targetTheta)^2*(obj.y(end)-y_T))/obj.Direction_Strength];
                 for i = 1:size(obstacles,1)
                     x_R = obstacles(i,1);
                     y_R = obstacles(i,2);
