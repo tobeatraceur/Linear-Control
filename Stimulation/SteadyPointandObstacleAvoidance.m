@@ -8,6 +8,7 @@ T_v = 0.3;
 K_w_theta = pi;
 K_trans = 12.7;
 K_r = 60000000;
+%Direction_Strength = 5;
 x(1) = 1000;%初始x值
 y(1) = 1000;%初始y轴坐标
 theta(1) = 0;%初始角度
@@ -28,7 +29,7 @@ for k=1:length(t)
     %     theta(k) =
     %读取障碍物的位置
     obstacles = [500 600; 400 400; 300 400; 800 200];
-    Grad = potentialFunc(x(k), y(k), x_T, y_T);
+    Grad = potentialFunc(x(k), y(k), x_T, y_T, theta_T);
     for i = 1:size(obstacles,1)
         Grad = Grad + K_r * ObstaclePotentialFunc(x(k), y(k), obstacles(i,1), obstacles(i,2));
     end
@@ -37,7 +38,7 @@ for k=1:length(t)
     v_d = 30*K_trans;
     theta_dtheta = atan2(-Grad(2), -Grad(1));
     w_d = K_w_theta * (2*pi*round((theta(k)-theta_dtheta)/(2*pi))-theta(k)+theta_dtheta);
-    theta_e = theta_dtheta - theta(k);
+    %theta_e = theta_dtheta - theta(k);
     
     
     v = v_d; w = w_d;
@@ -73,10 +74,13 @@ for i = 1:size(obstacles,1)
     scatter(obstacles(i,1),obstacles(i,2));
 end
 hold off;
-function Grad = potentialFunc(x, y, x_T, y_T)
-kp = 0.3;
+function Grad = potentialFunc(x, y, x_T, y_T, targetTheta)
+Direction_Strength=5;
+K_p = 0.5;
 
-Grad = [2*kp*(x-x_T), 2*kp*(y-y_T)];
+Grad = [2*K_p*(Direction_Strength*sin(targetTheta)^2*(x-x_T)-(Direction_Strength-1)*sin(targetTheta)*cos(targetTheta)*(y-y_T)+cos(targetTheta)^2*(x-x_T))/Direction_Strength,
+    2*K_p*(Direction_Strength*cos(targetTheta)^2*(y-y_T)-(Direction_Strength-1)*sin(targetTheta)*cos(targetTheta)*(x-x_T)+sin(targetTheta)^2*(y-y_T))/Direction_Strength];
+
 end
 
 function Grad = ObstaclePotentialFunc(x, y, x_R, y_R)
