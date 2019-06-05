@@ -23,7 +23,7 @@ classdef Controller
         T_v = 0.3;
         forwardSpeed = 20;
         
-        K_p = 0.3;
+        K_p = 0.5;
         Repulsive_Distance = 400;
         Direction_Strength = 2;
         L = 75.5;
@@ -69,7 +69,7 @@ classdef Controller
             else
                 % Obstacles avoidance
                 %Grad = [2*obj.K_p*(obj.x(end)-x_T), 2*obj.K_p*(obj.y(end)-y_T)];
-                Grad = [2*obj.K_p*(obj.Direction_Strength*sin(targetTheta)^2*(obj.x(end)-x_T)-(obj.Direction_Strength-1)*sin(targetTheta)*cos(targetTheta)*(obj.y(end)-y_T)+cos(targetTheta)^2*(obj.x(end)-x_T))/obj.Direction_Strength,
+                Grad = [2*obj.K_p*(obj.Direction_Strength*sin(targetTheta)^2*(obj.x(end)-x_T)-(obj.Direction_Strength-1)*sin(targetTheta)*cos(targetTheta)*(obj.y(end)-y_T)+cos(targetTheta)^2*(obj.x(end)-x_T))/obj.Direction_Strength,...
                     2*obj.K_p*(obj.Direction_Strength*cos(targetTheta)^2*(obj.y(end)-y_T)-(obj.Direction_Strength-1)*sin(targetTheta)*cos(targetTheta)*(obj.x(end)-x_T)+sin(targetTheta)^2*(obj.y(end)-y_T))/obj.Direction_Strength];
                 for i = 1:size(obstacles,1)
                     x_R = obstacles(i,1);
@@ -80,8 +80,8 @@ classdef Controller
                     end
                 end
                 
-                % v_d = sqrt(Grad(1)^2 + Grad(2)^2);
-                v_d = obj.forwardSpeed * obj.K_trans;
+                v_d = sqrt(Grad(1)^2 + Grad(2)^2);
+%                 v_d = obj.forwardSpeed * obj.K_trans;
                 theta_dtheta = atan2(-Grad(2), -Grad(1));
                 
                 w_d = obj.K_w_theta * (2 * pi * round((obj.theta(end) - theta_dtheta)/(2 * pi)) - obj.theta(end) + theta_dtheta);

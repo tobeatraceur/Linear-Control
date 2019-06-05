@@ -18,66 +18,73 @@ fprintf(outputFile, 'Log time: %s\n\n', char(datetime()));
 
 try
     car0.stop();
-    car1.stop();
-    car2.stop();
-    disp('Cars are already connected.')
-
 catch
-    disp('Initializing cars.')
-
+    fprintf('Connecting to car0... ');
     car0 = Car('btspp://AB5BC3563402', 1);
-    disp('Connect to car0')
+    fprintf('Done\n');
+end
+
+try
+    car1.stop();
+catch
+    fprintf('Connecting to car1... ');
     car1 = Car('btspp://AB5EC0563402', 1);
-    disp('Connect to car1')
+    fprintf('Done\n');
+end
+    
+try
+    car2.stop();
+catch
+    fprintf('Connecting to car2... ');
     car2 = Car('btspp://ABAFC2563402', 1);
-    disp('Connect to car2')
+    fprintf('Done\n');
+end
+    
+% Initialize angle 
+test_point_num = 100;
 
-    % Initialize angle 
-    test_point_num = 50;
+car0.set_speed([80, 80]);
+car1.set_speed([80, 80]);
+car2.set_speed([80, 80]);
 
-    car0.set_speed([5, 5]);
-    car1.set_speed([5, 5]);
-    car2.set_speed([5, 5]);
-
-    for i = 1: test_point_num
-        vicon.read_data();
-
-        trans = vicon.get_translation('car0');
-        test_x0(i) = trans0(1);
-        test_y0(i) = trans0(2);
-
-        trans = vicon.get_translation('car1');
-        test_x1(i) = trans1(1);
-        test_y1(i) = trans1(2);
-        
-        trans = vicon.get_translation('car2');
-        test_x2(i) = trans2(1);
-        test_y2(i) = trans2(2);
-
-    end
-
-    kandb = polyfit(test_x0(2:test_point_num), test_y0(2:test_point_num), 1);
-    thetaFixCar0 = atan2(kandb(1) * (test_x0(test_point_num) - test_x0(1)), ...
-        test_x0(test_point_num) - test_x0(1));
-
-    kandb = polyfit(test_x1(2:test_point_num), test_y1(2:test_point_num), 1);
-    thetaFixCar1 = atan2(kandb(1) * (test_x1(test_point_num) - test_x1(1)), ...
-        test_x1(test_point_num) - test_x1(1));
-
-    kandb = polyfit(test_x2(2:test_point_num), test_y2(2:test_point_num), 1);
-    thetaFixCar2 = atan2(kandb(1) * (test_x2(test_point_num) - test_x2(1)), ...
-        test_x2(test_point_num) - test_x2(1));
-
+for i = 1: test_point_num
     vicon.read_data();
-    thetaFixCar0 = thetaFixCar0 - vicon.get_rotation('car0');
-    thetaFixCar1 = thetaFixCar1 - vicon.get_rotation('car1');
-    thetaFixCar2 = thetaFixCar2 - vicon.get_rotation('car2');
 
-    clear kandb, test_x0, test_y0, test_x1, test_y1, test_x2, test_y2, trans
+    trans0 = vicon.get_translation('car0');
+    test_x0(i) = trans0(1);
+    test_y0(i) = trans0(2);
 
-    disp('Angle fix complete.')
+    trans1 = vicon.get_translation('car1');
+    test_x1(i) = trans1(1);
+    test_y1(i) = trans1(2);
+
+    trans2 = vicon.get_translation('car2');
+    test_x2(i) = trans2(1);
+    test_y2(i) = trans2(2);
 
 end
+
+kandb = polyfit(test_x0(2:end), test_y0(2:end), 1);
+thetaFixCar0 = atan2(kandb(1) * (test_x0(end) - test_x0(1)), ...
+    test_x0(end) - test_x0(1));
+
+kandb = polyfit(test_x1(2:end), test_y1(2:end), 1);
+thetaFixCar1 = atan2(kandb(1) * (test_x1(end) - test_x1(1)), ...
+    test_x1(end) - test_x1(1));
+
+kandb = polyfit(test_x2(2:end), test_y2(2:end), 1);
+thetaFixCar2 = atan2(kandb(1) * (test_x2(end) - test_x2(1)), ...
+    test_x2(end) - test_x2(1));
+
+vicon.read_data();
+thetaFixCar0 = thetaFixCar0 - vicon.get_rotation('car0');
+thetaFixCar1 = thetaFixCar1 - vicon.get_rotation('car1');
+thetaFixCar2 = thetaFixCar2 - vicon.get_rotation('car2');
+
+car0.stop();
+car1.stop();
+car2.stop();
+disp('Angle fix complete.')
 
 fprintf(outputFile, 'Theta fix car0: %f\n', thetaFixCar0);
 fprintf(outputFile, 'Theta fix car1: %f\n', thetaFixCar1);
@@ -151,6 +158,7 @@ disp('End control')
 
 %% Clean
 % vicon.close_client();
+close all;
 fclose(outputFile);
 car1.stop();car2.stop();
 pause(1);

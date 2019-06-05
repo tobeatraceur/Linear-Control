@@ -13,7 +13,7 @@ classdef VData < handle
 
             % Initialize figure
             obj.fig = figure();
-            obj.ax = axes('Parent', fig);
+            obj.ax = axes('Parent', obj.fig);
 
             % Initialize history
             obj.history = containers.Map;
@@ -157,10 +157,10 @@ classdef VData < handle
                 objectTranlation = object('GlobalTranslation').Translation;
 
                 if ~isKey(obj.history, k{1})
-                    obj.history(k) = [];
+                    obj.history(k{1}) = [];
                 end
 
-                obj.history(k{1}) = [obj.history(k{1}); objectTranlation];
+                obj.history(k{1}) = [obj.history(k{1}); objectTranlation'];
 
             end
         end
@@ -176,16 +176,17 @@ classdef VData < handle
                 y = his(1:end, 2);
 
                 % Draw only recent trajectory
-                if length(x) > 50
+                if length(x) > 100
                     x = x(end-49 : end);
                     y = y(end-49 : end);
                 end
 
                 plot(obj.ax, x, y);
-                axis([-2000 2000 -2000 2000]); % TODO: Use the right area size.
+                plot(obj.ax, x(end), y(end), '+');
+                axis([-3000 3000 -3000 3000]);
+            drawnow;
             end
             hold off;
-            drawnow;
 
         end
 
