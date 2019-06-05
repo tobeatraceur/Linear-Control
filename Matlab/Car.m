@@ -2,6 +2,7 @@ classdef Car
 
     properties
         bluetooth;
+        angleFixNum = 50;
         MAX_SPEED = 50;
         SPEED_FIX = 12.7;
     end
@@ -12,6 +13,27 @@ classdef Car
             obj.bluetooth = Bluetooth(name, channel);
             fopen(obj.bluetooth);
         end
+
+        function thetaFix = get_angle(obj, vicon, nameString)
+            obj.set_speed([80, 80]);
+
+            for i = 1: obj.angleFixNum
+                vicon.read_data();
+
+                trans = vicon.get_translation(nameString);
+                test_x(i) = trans(1);
+                test_y(i) = trans(2);
+
+            end
+            lastAngle = vicon.get_rotation(nameString);
+            obj.stop();
+
+            kandb = polyfit(test_x(2:end), test_y(2:end), 1);
+            thetaFix = atan2(kandb(1) * (test_x(end) - test_x(1)), ...
+                test_x(end) - test_x(1));
+            thetaFix = thetaFix - lastAngle;
+
+        end 
 
         function command = set_speed(obj, speed)
             speed = speed / obj.SPEED_FIX;
