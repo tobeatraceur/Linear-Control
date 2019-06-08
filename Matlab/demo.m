@@ -7,15 +7,14 @@ vicon = VData();
 disp('Vicon online.');
 
 % Open file
-filename = 'data01';
+filename = 'data23';
 dateString = strsplit(char(datetime));
-outputFile = fopen(['../ViconData/19-05-29/', filename, '.txt'], 'w');
+outputFile = fopen(['../ViconData/19-06-05/', filename, '.txt'], 'w');
 
 % Log experiment time
 fprintf(outputFile, 'Log time: %s\n\n', char(datetime()));
 
 % Initialize cars
-
 try
     car0.stop();
 catch
@@ -49,8 +48,19 @@ fprintf(outputFile, 'Theta fix car2: %f\n', thetaFixCar2);
 fprintf(outputFile, '\n\n');
 
 
+%% Generate path
+vicon.read_data();
+start_point = vicon.get_translation('car0');
+path_y = 0:15:2000;
+path_x = 800 * sin(path_y(:) / 2000 * 2 * pi);
+path_y = path_y + start_point(2);
+path_x = path_x + start_point(1);
+index = 1;
+
+
 %% Control
 % Initialize contoller
+controllerCar0 = Controller(thetaFixCar0);
 controllerCar1 = Controller(thetaFixCar1);
 controllerCar2 = Controller(thetaFixCar2);
 
@@ -63,20 +73,34 @@ while ishandle( MessageBox )
     vicon.read_data();
     vicon.update_trajectory();
 
+    if index > length(path_x)
+        index = length(path_x);
+    end
+
+    [path_x(index), path_y(index), 0];
+    [vl0, vr0, controllerCar0] = controllerCar0.update( ...
+        vicon.get_translation('car0'), ...
+        vicon.get_rotation('car0'), ...
+        [path_x(index), path_y(index), 0] , ...
+        vicon.get_rotation('car0') + thetaFixCar0, ...
+        []);
+    index = index + 1;
+
     [vl1, vr1, controllerCar1] = controllerCar1.update( ...
         vicon.get_translation('car1'), ...
         vicon.get_rotation('car1'), ...
-        vicon.get_translation('car0') + [250; 250; 0], ...
+        vicon.get_translation('car0') + [-200; -250; 0], ...
         vicon.get_rotation('car0') + thetaFixCar0, ...
         vicon.get_obstacles('car1'));
 
     [vl2, vr2, controllerCar2] = controllerCar2.update(...
         vicon.get_translation('car2'), ...
         vicon.get_rotation('car2'), ...
-        vicon.get_translation('car0') + [250; -250; 0], ...
+        vicon.get_translation('car0') + [200; -250; 0], ...
         vicon.get_rotation('car0') + thetaFixCar0, ...
         vicon.get_obstacles('car2'));
 
+%    commandCar0 = car0.set_speed([vl0, vr0]);
     commandCar1 = car1.set_speed([vl1, vr1]);
     commandCar2 = car2.set_speed([vl2, vr2]);
 
@@ -86,6 +110,9 @@ while ishandle( MessageBox )
     fprintf(outputFile, '***** Car0 *****\n');
     fprintf(outputFile, 'translation: %10.6f %10.6f %10.6f\n', ...
         vicon.get_translation('car0'));
+    fprintf(outputFile, 'rotation: %f\n', vicon.get_rotation('car0'));
+    fprintf(outputFile, 'velocity: %d %d\n', vl0, vr0);
+    fprintf(outputFile, 'command: %s\n', commandCar0);
     
     fprintf(outputFile, '***** Car1 *****\n');
     fprintf(outputFile, 'translation: %10.6f %10.6f %10.6f\n', ...
@@ -117,7 +144,7 @@ disp('End control')
 % vicon.close_client();
 close all;
 fclose(outputFile);
-car1.stop();car2.stop();
+car0.stop();car1.stop();car2.stop();
 pause(1);
-car1.stop();car2.stop();
+car0.stop();car1.stop();car2.stop();
 

@@ -176,7 +176,7 @@ classdef VData < handle
                 y = his(1:end, 2);
 
                 % Draw only recent trajectory
-                if length(x) > 100
+                if length(x) > 200
                     x = x(end-49 : end);
                     y = y(end-49 : end);
                 end
