@@ -43,7 +43,7 @@ classdef Controller
             obj.v2_e_last = 0;
         end
         
-        function [v1, v2, obj] = update(obj, trans, rotation, target, targetTheta, obstacles)
+        function [v1, v2, reach_target, obj] = update(obj, trans, rotation, target, targetTheta, obstacles)
             % Argument trans is the object's translation.
             % Argument rotation is the object's rotation angle in x-y plane.
             % Argument target is the target translation for this object.
@@ -57,11 +57,15 @@ classdef Controller
             y_T = target(2);
             obj.theta(end + 1) = rotation + obj.thetaFix;
             
+			reach_target = false;
+							
             if((x_T - trans(1))^2 + (y_T - trans(2))^2  < 8e3)
                 deta_theta = targetTheta - obj.theta(end);
                 deta_theta = mod(deta_theta, 2*pi);
                 v1 = 0;
                 v2 = 0;
+				reach_target = true;
+				
                 obj.v1_last = v1;
                 obj.v2_last = v2;
                 
