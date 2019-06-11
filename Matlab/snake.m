@@ -57,17 +57,14 @@ obstaclesName = {'car1', 'car2'};
 obstaclesCar = [car1, car2];
 obstaclesThetaFix = [thetaFixCar1, thetaFixCar2];
 
+%Initialization
 target = obstacles(1);
 targetName = 'car1';
 targetCar = obstaclesCar(1);
 targetThetaFix = obstaclesThetaFix(1);
 
-% A dialog to stop the loop
-MessageBox = msgbox( 'Stop demo');
-
-while ishandle( MessageBox )
-    for j=1:1:2
-        
+for j=1:1:2
+       
         while(1)
             
             % Read data
@@ -93,7 +90,7 @@ while ishandle( MessageBox )
                         vicon.get_translation(headName) + [350; 0; 0], ...
                         vicon.get_rotation(headName) + followerThetaFix(i), ...
                         vicon.get_obstacles(followerName));
-                    disp('foller');
+                    
                 else
                     [vl, vr, reachTarget_f, follower(i)] = follower(i).update( ...
                         vicon.get_translation(followerName{i}), ...
@@ -111,8 +108,9 @@ while ishandle( MessageBox )
             else
                 warning('Slow loop!')
             end
+			% reach target and stop
             if reachTarget
-                disp('1 end');
+                disp('the head get the target');
                 break;
             end
         end
@@ -132,9 +130,6 @@ while ishandle( MessageBox )
         targetCar = car2;
         targetThetaFix = thetaFixCar2;
         
-    end
-    
-    
 end
 
 disp('End control')
@@ -142,7 +137,7 @@ disp('End control')
 %% Clean
 % vicon.close_client();
 close all;
-car1.stop();car2.stop();
+car0.stop();car1.stop();car2.stop();
 pause(1);
-car1.stop();car2.stop();
+car0.stop();car1.stop();car2.stop();
 
