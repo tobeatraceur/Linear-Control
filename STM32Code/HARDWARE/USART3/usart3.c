@@ -87,7 +87,7 @@ void USART3_IRQHandler(void)
 						}
 						switch(Receive[1])
 						 {
-							 case 0x30:  Bluetooth_Velocity=Data;break;
+							 case 0x30:  Bluetooth_Velocity=Data/4;break;
 							 case 0x31:  Velocity_KP=Data;break;
 							 case 0x32:  Velocity_KI=Data;break;
 							 case 0x33:  Target_A=speed1;Target_B=speed2;break;//直接给左右轮赋值

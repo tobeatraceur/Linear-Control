@@ -194,17 +194,17 @@ void Get_RC(void)
 	int Yuzhi=2;
 	static float Bias,Last_Bias;
   float LY,RX;
-	if(Flag_Way==0)//蓝牙控制
+	if(Flag_Way==0)//蓝牙控制，都比之前小一半，turn原来是20
 	{
 		if(Flag_Direction==0) Velocity=0,Turn=0;   //停止
 		else if(Flag_Direction==1) Velocity=Bluetooth_Velocity,Turn=0;  //前进
-		else if(Flag_Direction==2) Velocity=Bluetooth_Velocity,Turn=20;  //右前
-		else if(Flag_Direction==3) Velocity=0,Turn=20;   //舵机向右
-		else if(Flag_Direction==4) Velocity=-Bluetooth_Velocity,Turn=-20;  // 右后
+		else if(Flag_Direction==2) Velocity=Bluetooth_Velocity,Turn=10;  //右前
+		else if(Flag_Direction==3) Velocity=0,Turn=10;   //舵机向右
+		else if(Flag_Direction==4) Velocity=-Bluetooth_Velocity,Turn=-10;  // 右后
 		else if(Flag_Direction==5) Velocity=-Bluetooth_Velocity,Turn=0;    //后退
-		else if(Flag_Direction==6) Velocity=-Bluetooth_Velocity,Turn=20;  //左后
-		else if(Flag_Direction==7) Velocity=0,Turn=-20;                       //舵机向左
-		else if(Flag_Direction==8) Velocity=Bluetooth_Velocity,Turn=-20;  //左前
+		else if(Flag_Direction==6) Velocity=-Bluetooth_Velocity,Turn=10;  //左后
+		else if(Flag_Direction==7) Velocity=0,Turn=-10;                       //舵机向左
+		else if(Flag_Direction==8) Velocity=Bluetooth_Velocity,Turn=-10;  //左前
 	}
 	else	if(Flag_Way==1)//PS2控制
 	{
