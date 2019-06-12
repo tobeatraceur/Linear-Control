@@ -5,6 +5,9 @@ classdef VData < handle
         fig;
         ax;
         history;
+        MAXPOINTS = 500;
+        mousePos;
+        readMouse = false;
     end
 
     methods
@@ -117,7 +120,9 @@ classdef VData < handle
         end
 
         function obstacles = get_obstacles(obj, name)
-            if isKey(obj.data, name)
+            if strcmp(name, 'none') == 1
+                obstacles = [];
+            elseif isKey(obj.data, name)
                 obstacles = [];
                 for k = obj.data.keys()
                     if ~ strcmp(k{1}, name)
@@ -156,12 +161,14 @@ classdef VData < handle
                 object = obj.data(k{1});
                 objectTranlation = object('GlobalTranslation').Translation;
 
-                if ~isKey(obj.history, k{1})
-                    obj.history(k{1}) = [];
+                if object('GlobalTranslation').Occluded == 0
+                    if ~isKey(obj.history, k{1})
+                        obj.history(k{1}) = [];
+                    end
+
+                    obj.history(k{1}) = [obj.history(k{1}); objectTranlation'];
+
                 end
-
-                obj.history(k{1}) = [obj.history(k{1}); objectTranlation'];
-
             end
         end
 
@@ -171,25 +178,42 @@ classdef VData < handle
             hold on;
 
             for k = obj.data.keys()
+                if ~isKey(obj.history, k{1})
+                    continue;
+                end
                 his= obj.history(k{1});
                 x = his(1:end, 1);
                 y = his(1:end, 2);
 
                 % Draw only recent trajectory
-                if length(x) > 200
-                    x = x(end-49 : end);
-                    y = y(end-49 : end);
+                if length(x) > obj.MAXPOINTS
+                    x = x(end-obj.MAXPOINTS+1 : end);
+                    y = y(end-obj.MAXPOINTS+1 : end);
                 end
 
+                if obj.readMouse
+                    plot(obj.ax, obj.mousePos(1), obj.mousePos(2), 'go')
+                end
+                
                 plot(obj.ax, x, y);
                 plot(obj.ax, x(end), y(end), '+');
-                axis([-3000 3000 -3000 3000]);
+                axis([-1700 300 -2000 850]);
             drawnow;
             end
             hold off;
 
         end
 
+        function cp = get_mouse(obj)
+            cp = get(obj.ax, 'CurrentPoint');
+            cp = [cp(1, 1:2), 0];
+            obj.mousePos = cp;
+            if sum(cp < 2000 & cp > -2000) == 3
+                obj.readMouse = true;
+            else
+                obj.readMouse = false;
+            end
+        end
     end
 
 end

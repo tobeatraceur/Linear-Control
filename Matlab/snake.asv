@@ -66,7 +66,7 @@ while(headIndex<size(carList, 2))
     targetThetaFix = carThetaFix(headIndex+1);
     
     MessageBox = msgbox( 'Stop demo');
-    
+
     while ishandle( MessageBox )
         
         % Read data
@@ -75,31 +75,21 @@ while(headIndex<size(carList, 2))
         vicon.update_trajectory();
         
         %head
-        relativeTheta = vicon.get_rotation(targetName) + targetThetaFix;
-        thetaMatrix = [cos(relativeTheta), sin(relativeTheta), 0;
-            -sin(relativeTheta), cos(relativeTheta), 0;
-            0, 0, 1];
-        vicon.get_translation(targetName) + thetaMatrix*[-600; 0; 0]
         [vlHead, vrHead, reachTarget, head] = head.update( ...
             vicon.get_translation(headName), ...
             vicon.get_rotation(headName), ...
-            vicon.get_translation(targetName) + thetaMatrix*[-600; 0; 0], ...
+            vicon.get_translation(targetName) + [-300; 0; 0], ...
             vicon.get_rotation(targetName) + targetThetaFix, ...
             vicon.get_obstacles(headName));
         
-        headCar.set_speed([vlHead, vrHead]/4);
+        headCar.set_speed([vlHead, vrHead]);
         
         %follower
-        
         for i = 1:(headIndex-1)
-            relativeTheta = vicon.get_rotation(carName{i+1}) + carThetaFix(i+1);
-            thetaMatrix = [cos(relativeTheta), sin(relativeTheta), 0;
-                -sin(relativeTheta), cos(relativeTheta), 0;
-                0, 0, 1];
             [vl, vr, reachTarget_f, carController(i)] = carController(i).update( ...
                 vicon.get_translation(carName{i}), ...
                 vicon.get_rotation(carName{i}), ...
-                vicon.get_translation(carName{i+1}) + thetaMatrix*[-600; 0; 0], ...
+                vicon.get_translation(carName{i+1}) + [-300; 0; 0], ...
                 vicon.get_rotation(carName{i+1}) + carThetaFix(i+1), ...
                 vicon.get_obstacles(carName{i}));
             
@@ -119,11 +109,9 @@ while(headIndex<size(carList, 2))
             break;
         end
     end
-    
     if ~ishandle( MessageBox )
         break;
     end
-    
     headIndex = headIndex+1;
 end
 
