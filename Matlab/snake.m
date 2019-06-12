@@ -38,6 +38,7 @@ end
 
 %% Control
 % Initialize contoller
+controllerCar0 = Controller(thetaFixCar0);
 controllerCar1 = Controller(thetaFixCar1);
 controllerCar2 = Controller(thetaFixCar2);
 
