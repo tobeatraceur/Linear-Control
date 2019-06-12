@@ -42,29 +42,27 @@ controllerCar0 = Controller(thetaFixCar0);
 controllerCar1 = Controller(thetaFixCar1);
 controllerCar2 = Controller(thetaFixCar2);
 
-%the target, the head, the obstacles
-head = controllerCar0;
-headCar = car0;
-headName = 'car0';
-headThetaFix = thetaFixCar0;
+%the car
+carController = [controllerCar0, controllerCar1, controllerCar2];
+carList = [car0, car1, car2];
+carName = {'car0', 'car1', 'car2'};
+carThetaFix = [thetaFixCar0, thetaFixCar1, thetaFixCar2];
 
-follower = [];
-followerCar = [];
-followerName = {};
-followerThetaFix = [];
-
-obstacles = [controllerCar1, controllerCar2];
-obstaclesName = {'car1', 'car2'};
-obstaclesCar = [car1, car2];
-obstaclesThetaFix = [thetaFixCar1, thetaFixCar2];
 
 %Initialization
-target = obstacles(1);
-targetName = 'car1';
-targetCar = obstaclesCar(1);
-targetThetaFix = obstaclesThetaFix(1);
+headIndex = 1;
 
-for j=1:1:2
+while(headIndex<=size(carList, 2))
+
+	head = carController[headIndex];
+	headCar = carList[headIndex];
+	headName = carName{headIndex};
+	headThetaFix = carThetaFix[headIndex];
+	
+	target = carController[headIndex+1];
+	targetCar = carList[headIndex+1];
+	targetName = carName{headIndex+1}
+	targetThetaFix = carThetaFix[headIndex+1];
        
         while(1)
             
@@ -82,25 +80,26 @@ for j=1:1:2
                 vicon.get_obstacles(headName));
             
             headCar.set_speed([vlHead, vrHead]);
+			
             %follower
-            for i = 1:size(follower, 2)
-                if i==1
-                    [vl, vr, reachTarget_f, follower(i)] = follower(i).update( ...
-                        vicon.get_translation(followerName), ...
-                        vicon.get_rotation(followerName), ...
+            for i = 1:(headIndex-1)
+                if i==(headIndex-1)
+                    [vl, vr, reachTarget_f, carController(i)] = carController(i).update( ...
+                        vicon.get_translation(carName{i}), ...
+                        vicon.get_rotation(carName{i}), ...
                         vicon.get_translation(headName) + [350; 0; 0], ...
-                        vicon.get_rotation(headName) + followerThetaFix(i), ...
-                        vicon.get_obstacles(followerName));
+                        vicon.get_rotation(headName) + carThetaFix(i), ...
+                        vicon.get_obstacles(carName{i}));
                     
                 else
-                    [vl, vr, reachTarget_f, follower(i)] = follower(i).update( ...
-                        vicon.get_translation(followerName{i}), ...
-                        vicon.get_rotation(followerName(i)), ...
-                        vicon.get_translation(followerName{1}) + [350; 0; 0], ...
-                        vicon.get_rotation(followerName{i-1}) + followerThetaFix(i), ...
-                        vicon.get_obstacles(followerName{i}));
+                    [vl, vr, reachTarget_f, carController(i)] = carController(i).update( ...
+                        vicon.get_translation(carName{i}), ...
+                        vicon.get_rotation(carName{i}), ...
+                        vicon.get_translation(carName{i+1}) + [350; 0; 0], ...
+                        vicon.get_rotation(carName{i+1}) + carThetaFix(i), ...
+                        vicon.get_obstacles(carName{i}));
                 end
-                followerCar(i).set_speed([vl, vr]);
+                carList(i).set_speed([vl, vr]);
                 
             end
             runTime = toc;
@@ -116,21 +115,7 @@ for j=1:1:2
             end
         end
         
-        follower = [follower, head];
-        followerCar = [followerCar, headCar];
-        followerName = 'car0';
-        followerThetaFix = [followerThetaFix, headThetaFix];
-        
-        head = target;
-        headCar = targetCar;
-        headName = targetName;
-        headThetaFix = targetThetaFix;
-        
-        target = controllerCar2;
-        targetName = 'car2';
-        targetCar = car2;
-        targetThetaFix = thetaFixCar2;
-        
+        headIndex = headIndex+1;
 end
 
 disp('End control')
