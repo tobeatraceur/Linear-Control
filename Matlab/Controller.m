@@ -20,7 +20,7 @@ classdef Controller
         %K_r = 6e7;
         K_r = 10^4;
         Repulsive_Distance = 400;
-        alpha_r = 4;
+        alpha_r = 0.4;
         K_v = 0.7;
         K_trans = 12.7;
         T_v = 0.3;
