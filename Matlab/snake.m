@@ -51,19 +51,11 @@ carThetaFix = [thetaFixCar0, thetaFixCar1, thetaFixCar2];
 
 %Initialization
 headIndex = 1;
+finalPosition = vicon.get_translation(carName{1});
+finalTheta = vicon.get_rotation(carName{1}) + carThetaFix(1);
 disp('begin');
 
-while(headIndex<size(carList, 2))
-    
-    head = carController(headIndex);
-    headCar = carList(headIndex);
-    headName = carName{headIndex};
-    headThetaFix = carThetaFix(headIndex);
-    
-    target = carController(headIndex+1);
-    targetCar = carList(headIndex+1);
-    targetName = carName{headIndex+1};
-    targetThetaFix = carThetaFix(headIndex+1);
+while(headIndex<=size(carList, 2))
     
     MessageBox = msgbox( 'Stop demo');
     
@@ -74,36 +66,40 @@ while(headIndex<size(carList, 2))
         vicon.read_data();
         vicon.update_trajectory();
         
-        %head
-        relativeTheta = vicon.get_rotation(targetName) + targetThetaFix;
-        thetaMatrix = [cos(relativeTheta), sin(relativeTheta), 0;
-            -sin(relativeTheta), cos(relativeTheta), 0;
-            0, 0, 1];
-        vicon.get_translation(targetName) + thetaMatrix*[-600; 0; 0]
-        [vlHead, vrHead, reachTarget, head] = head.update( ...
-            vicon.get_translation(headName), ...
-            vicon.get_rotation(headName), ...
-            vicon.get_translation(targetName) + thetaMatrix*[-600; 0; 0], ...
-            vicon.get_rotation(targetName) + targetThetaFix, ...
-            vicon.get_obstacles(headName));
+        reachTargetList = [];
         
-        headCar.set_speed([vlHead, vrHead]/4);
-        
-        %follower
-        
-        for i = 1:(headIndex-1)
-            relativeTheta = vicon.get_rotation(carName{i+1}) + carThetaFix(i+1);
-            thetaMatrix = [cos(relativeTheta), sin(relativeTheta), 0;
-                -sin(relativeTheta), cos(relativeTheta), 0;
-                0, 0, 1];
-            [vl, vr, reachTarget_f, carController(i)] = carController(i).update( ...
+        for i = 1:1:headIndex
+            
+            if(headIndex == szie(car,2) && i == headIndex)
+                targetPosition = finalPosition;
+                targetTheta = finalTheta;
+                
+            else
+                targetTheta = vicon.get_rotation(carName{i+1}) + carThetaFix(i+1);
+                
+                thetaMatrix = [cos(targetTheta), -sin(targetTheta), 0;
+                    sin(targetTheta), cos(targetTheta), 0;
+                    0, 0, 1];
+                targetPosition = vicon.get_translation(carName{i+1}) + thetaMatrix*[-400; 0; 0];
+                
+            end
+            
+            [vl, vr, reachTarget, carController(i)] = carController(i).update( ...
                 vicon.get_translation(carName{i}), ...
                 vicon.get_rotation(carName{i}), ...
-                vicon.get_translation(carName{i+1}) + thetaMatrix*[-600; 0; 0], ...
-                vicon.get_rotation(carName{i+1}) + carThetaFix(i+1), ...
+                targetPosition, ...
+                targetTheta, ...
                 vicon.get_obstacles(carName{i}));
             
+            if i == headIndex
+                carList(i) = carList(i).set_MAX_SPEED(20);
+            else
+                carList(i) = carList(i).set_MAX_SPEED(40);
+            end
+            
             carList(i).set_speed([vl, vr]);
+            
+            reachTargetList = [reachTargetList, reachTarget];
             
         end
         
@@ -113,9 +109,10 @@ while(headIndex<size(carList, 2))
         else
             warning('Slow loop!')
         end
+        
         % reach target and stop
-        if reachTarget
-            disp('the head get the target');
+        if sum(reachTargetList) == headIndex
+            disp('all cars get the target');
             break;
         end
     end

@@ -14,6 +14,11 @@ classdef Car
             fopen(obj.bluetooth);
         end
 
+		function obj = set_MAX_SPEED(obj, newMAX_SPEED)
+			%set the max speed for the snake
+			obj.MAX_SPEED = newMAX_SPEED;
+		end
+		
         function thetaFix = get_angle(obj, vicon, nameString)
             obj.set_speed([80, 80]);
 
