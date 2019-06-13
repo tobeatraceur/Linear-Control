@@ -120,7 +120,8 @@ classdef Controller
                 v1 = obj.v1_last + obj.K_v*(v1_e - obj.v1_e_last) + (obj.K_v*dt/obj.T_v)*v1_e;
                 v2 = obj.v2_last + obj.K_v*(v2_e - obj.v2_e_last) + (obj.K_v*dt/obj.T_v)*v2_e;
                 
-                disp((x_T - trans(1))^2 + (y_T - trans(2))^2);
+                %                 v1 = v1_d;
+                %                 v2 = v2_d;
                 if((x_T - trans(1))^2 + (y_T - trans(2))^2  < 1e5)
                     reach_target = true;
                 else

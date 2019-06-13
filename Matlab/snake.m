@@ -63,6 +63,9 @@ carThetaFix = [thetaFixCar0, thetaFixCar1, thetaFixCar2];
 
 filterAlpha = 0.4;
 headIndex = 1;
+finalPosition = vicon.get_translation(carName{1});
+finalTheta = vicon.get_rotation(carName{1}) + carThetaFix(1);
+disp('begin');
 
 vicon.read_data();
 carLastTheta = [thetaFixCar0 + carThetaFix(2), thetaFixCar1 + carThetaFix(3), thetaFixCar2 + carThetaFix(1)];

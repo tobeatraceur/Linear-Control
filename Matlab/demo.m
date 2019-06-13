@@ -15,7 +15,7 @@ outputFile = fopen(['../ViconData/19-06-13/', filename, '.txt'], 'w');
 % Log experiment time
 fprintf(outputFile, 'Log time: %s\n\n', char(datetime()));
 
-% Initialize cars
+Initialize cars
 try
     car0.stop();
 catch
@@ -54,8 +54,8 @@ for i = 1:100
     vicon.read_data();
 end
 start_point = vicon.get_translation('car0');
-path_y = 0:10:3000;
-path_x = -400 * sin(path_y(:) / 2000 * 2 * pi);
+path_y = 0:10:1000;
+path_x = -600 * sin(path_y(:) / 2000 * 2 * pi);
 path_y = path_y + start_point(2);
 path_x = path_x + start_point(1);
 index = 1;
