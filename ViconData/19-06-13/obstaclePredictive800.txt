@@ -1,0 +1,961 @@
+Log time: 2019-06-13 20:38:21
+
+Theta fix car0: 1.260975
+Theta fix car1: -1.511238
+Theta fix car2: 1.913545
+
+
+time: 63727763902.410004
+***** Car0 *****
+translation: -294.540986 921.670653  83.593455
+rotation: -3.127645
+velocity: 1.489672e+03 1.544510e+03
+command: {333+49+51}
+***** Car1 *****
+translation: -1686.064807 2447.599072 815.586381
+rotation: 0.269236
+velocity: 0 0
+command: {333+00+00}
+***** Car2 *****
+translation: -364.807270 -118.897959  59.323049
+rotation: -1.905799
+velocity: 0 0
+command: {333+00+00}
+
+
+time: 63727763902.472000
+***** Car0 *****
+translation: -294.514068 921.641325  83.598168
+rotation: -3.127888
+velocity: 4.708438e+02 4.882456e+02
+command: {333+37+38}
+***** Car1 *****
+translation: -1686.062218 2447.775661 815.765745
+rotation: 0.268364
+velocity: 0 0
+command: {333+00+00}
+***** Car2 *****
+translation: -365.088605 -118.778980  58.815092
+rotation: -1.905664
+velocity: 0 0
+command: {333+00+00}
+
+
+time: 63727763902.581001
+***** Car0 *****
+translation: -296.760096 914.234710  83.679208
+rotation: -3.129466
+velocity: 1.419110e+03 1.471322e+03
+command: {333+49+51}
+***** Car1 *****
+translation: -1686.070878 2447.599646 815.518116
+rotation: 0.270253
+velocity: 0 0
+command: {333+00+00}
+***** Car2 *****
+translation: -365.085594 -118.787582  58.814186
+rotation: -1.905591
+velocity: 0 0
+command: {333+00+00}
+
+
+time: 63727763902.679008
+***** Car0 *****
+translation: -305.497522 881.163139  82.987895
+rotation: -3.108772
+velocity: 4.951622e+02 4.995890e+02
+command: {333+39+39}
+***** Car1 *****
+translation: -1686.119468 2447.455872 815.509377
+rotation: 0.271351
+velocity: 0 0
+command: {333+00+00}
+***** Car2 *****
+translation: -364.810428 -118.885445  59.265432
+rotation: -1.906116
+velocity: 0 0
+command: {333+00+00}
+
+
+time: 63727763902.763000
+***** Car0 *****
+translation: -319.220813 829.120285  82.266202
+rotation: -3.099864
+velocity: 8.256913e+02 7.719506e+02
+command: {333+52+48}
+***** Car1 *****
+translation: -1686.149318 2447.442767 815.308621
+rotation: 0.272594
+velocity: 0 0
+command: {333+00+00}
+***** Car2 *****
+translation: -365.078227 -118.789909  58.789982
+rotation: -1.905685
+velocity: 0 0
+command: {333+00+00}
+
+
+time: 63727763902.875992
+***** Car0 *****
+translation: -339.103156 755.857490  81.163307
+rotation: -3.081937
+velocity: 1.343931e+03 7.072190e+02
+command: {333+63+33}
+***** Car1 *****
+translation: -1686.090928 2447.695670 815.553225
+rotation: 0.270481
+velocity: 0 0
+command: {333+00+00}
+***** Car2 *****
+translation: -365.077991 -118.777672  58.811294
+rotation: -1.905639
+velocity: 0 0
+command: {333+00+00}
+
+
+time: 63727763902.972992
+***** Car0 *****
+translation: -354.922119 695.408312  80.244674
+rotation: -3.094983
+velocity: 7.967378e+02 6.061011e+02
+command: {333+56+43}
+***** Car1 *****
+translation: -1686.100392 2447.545686 815.419581
+rotation: 0.270969
+velocity: 0 0
+command: {333+00+00}
+***** Car2 *****
+translation: -365.080050 -118.777563  58.830827
+rotation: -1.905597
+velocity: 0 0
+command: {333+00+00}
+
+
+time: 63727763903.060005
+***** Car0 *****
+translation: -374.080882 644.689558  79.705832
+rotation: 3.109702
+velocity: 1.050838e+03 1.064674e+03
+command: {333+50+50}
+***** Car1 *****
+translation: -1686.119468 2447.600641 815.444106
+rotation: 0.270755
+velocity: 0 0
+command: {333+00+00}
+***** Car2 *****
+translation: -365.079715 -118.762541  58.819137
+rotation: -1.905691
+velocity: 0 0
+command: {333+00+00}
+
+
+time: 63727763903.184006
+***** Car0 *****
+translation: -411.727590 589.176276  79.040918
+rotation: 2.907176
+velocity: 1.361651e+03 1.365508e+03
+command: {333+50+50}
+***** Car1 *****
+translation: -1686.136527 2447.481393 815.346349
+rotation: 0.272317
+velocity: 0 0
+command: {333+00+00}
+***** Car2 *****
+translation: -365.084484 -118.767932  58.802182
+rotation: -1.905714
+velocity: 0 0
+command: {333+00+00}
+
+
+time: 63727763903.283005
+***** Car0 *****
+translation: -457.011618 536.032489  78.632248
+rotation: 2.794546
+velocity: 1.173854e+03 1.260190e+03
+command: {333+48+52}
+***** Car1 *****
+translation: -1686.097303 2447.624728 815.439467
+rotation: 0.270253
+velocity: 0 0
+command: {333+00+00}
+***** Car2 *****
+translation: -365.083249 -118.780252  58.815162
+rotation: -1.905633
+velocity: 0 0
+command: {333+00+00}
+
+
+time: 63727763903.369003
+***** Car0 *****
+translation: -493.796482 490.874235  78.214256
+rotation: 2.782013
+velocity: 1.343688e+03 1.403285e+03
+command: {333+49+51}
+***** Car1 *****
+translation: -1686.070449 2447.582842 815.641696
+rotation: 0.270202
+velocity: 0 0
+command: {333+00+00}
+***** Car2 *****
+translation: -365.086464 -118.777764  58.807738
+rotation: -1.905808
+velocity: 0 0
+command: {333+00+00}
+
+
+time: 63727763903.483994
+***** Car0 *****
+translation: -536.352578 434.701472  76.376188
+rotation: 2.808911
+velocity: 1.194449e+03 1.298650e+03
+command: {333+48+52}
+***** Car1 *****
+translation: -1686.089945 2447.564288 815.717869
+rotation: 0.269985
+velocity: 0 0
+command: {333+00+00}
+***** Car2 *****
+translation: -364.814207 -118.871699  59.269407
+rotation: -1.905938
+velocity: 0 0
+command: {333+00+00}
+
+
+time: 63727763903.593002
+***** Car0 *****
+translation: -570.568698 380.370189  77.447714
+rotation: 2.861561
+velocity: 1.283315e+03 1.360035e+03
+command: {333+49+51}
+***** Car1 *****
+translation: -1686.073514 2447.632645 815.625357
+rotation: 0.270258
+velocity: 0 0
+command: {333+00+00}
+***** Car2 *****
+translation: -365.082466 -118.781437  58.809877
+rotation: -1.905730
+velocity: 0 0
+command: {333+00+00}
+
+
+time: 63727763903.702988
+***** Car0 *****
+translation: -611.328078 315.126209  75.738424
+rotation: 2.872948
+velocity: 1.155394e+03 1.270105e+03
+command: {333+48+52}
+***** Car1 *****
+translation: -1686.089795 2447.596428 815.542541
+rotation: 0.270883
+velocity: 0 0
+command: {333+00+00}
+***** Car2 *****
+translation: -364.797879 -118.881483  59.283850
+rotation: -1.906054
+velocity: 0 0
+command: {333+00+00}
+
+
+time: 63727763903.806000
+***** Car0 *****
+translation: -647.163986 253.377971  76.169476
+rotation: 2.918442
+velocity: 1.189938e+03 1.273787e+03
+command: {333+48+52}
+***** Car1 *****
+translation: -1686.085422 2447.622114 815.480958
+rotation: 0.271090
+velocity: 0 0
+command: {333+00+00}
+***** Car2 *****
+translation: -365.091040 -118.775445  58.815541
+rotation: -1.905775
+velocity: 0 0
+command: {333+00+00}
+
+
+time: 63727763903.926987
+***** Car0 *****
+translation: -681.861248 191.755596  75.388951
+rotation: 2.942778
+velocity: 1.081046e+03 1.189483e+03
+command: {333+48+52}
+***** Car1 *****
+translation: -1686.124801 2447.534365 815.593559
+rotation: 0.270563
+velocity: 0 0
+command: {333+00+00}
+***** Car2 *****
+translation: -365.076192 -118.780690  58.822114
+rotation: -1.905668
+velocity: 0 0
+command: {333+00+00}
+
+
+time: 63727763904.011993
+***** Car0 *****
+translation: -708.496056 140.799471  74.964886
+rotation: 2.962132
+velocity: 1.087896e+03 1.171563e+03
+command: {333+48+52}
+***** Car1 *****
+translation: -1686.114004 2447.569616 815.415020
+rotation: 0.272176
+velocity: 0 0
+command: {333+00+00}
+***** Car2 *****
+translation: -365.082107 -118.786364  58.817084
+rotation: -1.905709
+velocity: 0 0
+command: {333+00+00}
+
+
+time: 63727763904.121994
+***** Car0 *****
+translation: -739.057948  77.125860  74.501789
+rotation: 2.995087
+velocity: 9.777947e+02 1.058401e+03
+command: {333+48+52}
+***** Car1 *****
+translation: -1686.100273 2447.624874 815.463527
+rotation: 0.271562
+velocity: 0 0
+command: {333+00+00}
+***** Car2 *****
+translation: -364.819089 -118.895802  59.280844
+rotation: -1.905811
+velocity: 0 0
+command: {333+00+00}
+
+
+time: 63727763904.234993
+***** Car0 *****
+translation: -767.915824  13.028009  72.989989
+rotation: 3.031585
+velocity: 1.023492e+03 1.091434e+03
+command: {333+48+52}
+***** Car1 *****
+translation: -1686.106535 2447.513659 815.513544
+rotation: 0.270562
+velocity: 0 0
+command: {333+00+00}
+***** Car2 *****
+translation: -365.076760 -118.793765  58.795357
+rotation: -1.905664
+velocity: 0 0
+command: {333+00+00}
+
+
+time: 63727763904.332993
+***** Car0 *****
+translation: -791.262714 -46.269481  72.756397
+rotation: 3.066974
+velocity: 9.673300e+02 1.041055e+03
+command: {333+48+52}
+***** Car1 *****
+translation: -1686.073051 2447.549858 815.765626
+rotation: 0.269439
+velocity: 0 0
+command: {333+00+00}
+***** Car2 *****
+translation: -364.794903 -118.898198  59.303458
+rotation: -1.906118
+velocity: 0 0
+command: {333+00+00}
+
+
+time: 63727763904.429001
+***** Car0 *****
+translation: -811.528044 -101.307733  72.867754
+rotation: 3.099640
+velocity: 9.929759e+02 1.062689e+03
+command: {333+48+52}
+***** Car1 *****
+translation: -1686.090886 2447.514828 815.374127
+rotation: 0.272479
+velocity: 0 0
+command: {333+00+00}
+***** Car2 *****
+translation: -365.074841 -118.774787  58.803586
+rotation: -1.905749
+velocity: 0 0
+command: {333+00+00}
+
+
+time: 63727763904.511993
+***** Car0 *****
+translation: -830.732115 -155.255486  70.822176
+rotation: 3.128512
+velocity: 9.486573e+02 1.026733e+03
+command: {333+48+52}
+***** Car1 *****
+translation: -1686.088015 2447.591706 815.496267
+rotation: 0.271480
+velocity: 0 0
+command: {333+00+00}
+***** Car2 *****
+translation: -365.074656 -118.778808  58.809042
+rotation: -1.905885
+velocity: 0 0
+command: {333+00+00}
+
+
+time: 63727763904.622993
+***** Car0 *****
+translation: -852.820677 -221.613543  68.086763
+rotation: -3.106965
+velocity: 9.501995e+02 1.026028e+03
+command: {333+48+52}
+***** Car1 *****
+translation: -1686.073152 2447.670285 815.494008
+rotation: 0.270331
+velocity: 0 0
+command: {333+00+00}
+***** Car2 *****
+translation: -364.791857 -118.886016  59.278138
+rotation: -1.906080
+velocity: 0 0
+command: {333+00+00}
+
+
+time: 63727763904.732994
+***** Car0 *****
+translation: -869.402765 -291.750147  68.827989
+rotation: 3.138933
+velocity: 8.868290e+02 9.924340e+02
+command: {333+47+53}
+***** Car1 *****
+translation: -1686.044295 2447.686440 815.721857
+rotation: 0.269616
+velocity: 0 0
+command: {333+00+00}
+***** Car2 *****
+translation: -365.081195 -118.781450  58.798953
+rotation: -1.905749
+velocity: 0 0
+command: {333+00+00}
+
+
+time: 63727763904.839005
+***** Car0 *****
+translation: -886.584069 -360.374573  66.640924
+rotation: -3.102673
+velocity: 8.749374e+02 9.646618e+02
+command: {333+48+52}
+***** Car1 *****
+translation: -1686.077855 2447.532349 815.574830
+rotation: 0.269625
+velocity: 0 0
+command: {333+00+00}
+***** Car2 *****
+translation: -364.807794 -118.874699  59.243400
+rotation: -1.906112
+velocity: 0 0
+command: {333+00+00}
+
+
+time: 63727763904.945992
+***** Car0 *****
+translation: -898.946603 -422.737651  66.990753
+rotation: -3.070352
+velocity: 8.160700e+02 9.264282e+02
+command: {333+47+53}
+***** Car1 *****
+translation: -1686.142388 2447.522647 815.312144
+rotation: 0.271818
+velocity: 0 0
+command: {333+00+00}
+***** Car2 *****
+translation: -364.813280 -118.870186  59.276222
+rotation: -1.905990
+velocity: 0 0
+command: {333+00+00}
+
+
+time: 63727763905.056000
+***** Car0 *****
+translation: -911.805624 -498.595800  68.117336
+rotation: -2.958687
+velocity: 7.879379e+02 8.685472e+02
+command: {333+48+52}
+***** Car1 *****
+translation: -1686.047586 2447.722192 815.565368
+rotation: 0.270520
+velocity: 0 0
+command: {333+00+00}
+***** Car2 *****
+translation: -365.083025 -118.786023  58.796188
+rotation: -1.905708
+velocity: 0 0
+command: {333+00+00}
+
+
+time: 63727763905.172997
+***** Car0 *****
+translation: -916.179144 -570.000034  71.042381
+rotation: -2.940986
+velocity: 7.196158e+02 8.338176e+02
+command: {333+46+54}
+***** Car1 *****
+translation: -1686.063637 2447.631144 815.954803
+rotation: 0.267508
+velocity: 0 0
+command: {333+00+00}
+***** Car2 *****
+translation: -365.083683 -118.785299  58.818953
+rotation: -1.905638
+velocity: 0 0
+command: {333+00+00}
+
+
+time: 63727763905.281006
+***** Car0 *****
+translation: -920.312707 -634.626013  70.855056
+rotation: -2.904946
+velocity: 6.865793e+02 7.788646e+02
+command: {333+47+53}
+***** Car1 *****
+translation: -1686.054506 2447.663352 815.618940
+rotation: 0.269984
+velocity: 0 0
+command: {333+00+00}
+***** Car2 *****
+translation: -365.088973 -118.776888  58.806639
+rotation: -1.905777
+velocity: 0 0
+command: {333+00+00}
+
+
+time: 63727763905.369995
+***** Car0 *****
+translation: -922.186730 -699.259021  70.016689
+rotation: -2.860390
+velocity: 6.226387e+02 7.363158e+02
+command: {333+46+54}
+***** Car1 *****
+translation: -1686.094725 2447.568514 815.368223
+rotation: 0.271192
+velocity: 0 0
+command: {333+00+00}
+***** Car2 *****
+translation: -364.824670 -118.883298  59.279726
+rotation: -1.905924
+velocity: 0 0
+command: {333+00+00}
+
+
+time: 63727763905.479004
+***** Car0 *****
+translation: -920.414721 -770.101442  68.653208
+rotation: -2.819613
+velocity: 5.736254e+02 6.780932e+02
+command: {333+45+53}
+***** Car1 *****
+translation: -1686.132531 2447.515344 815.559312
+rotation: 0.270206
+velocity: 0 0
+command: {333+00+00}
+***** Car2 *****
+translation: -364.797686 -118.902407  59.303740
+rotation: -1.905943
+velocity: 0 0
+command: {333+00+00}
+
+
+time: 63727763905.591995
+***** Car0 *****
+translation: -912.722452 -841.575522  68.633317
+rotation: -2.739231
+velocity: 5.136968e+02 6.250292e+02
+command: {333+40+49}
+***** Car1 *****
+translation: -1686.049315 2447.713397 815.652392
+rotation: 0.269992
+velocity: 0 0
+command: {333+00+00}
+***** Car2 *****
+translation: -365.083283 -118.783980  58.800838
+rotation: -1.905725
+velocity: 0 0
+command: {333+00+00}
+
+
+time: 63727763905.702995
+***** Car0 *****
+translation: -902.311243 -911.666815  65.878843
+rotation: -2.686788
+velocity: 4.561606e+02 5.739630e+02
+command: {333+36+45}
+***** Car1 *****
+translation: -1686.089569 2447.505825 815.491557
+rotation: 0.271110
+velocity: 0 0
+command: {333+00+00}
+***** Car2 *****
+translation: -365.076929 -118.784023  58.803011
+rotation: -1.905612
+velocity: 0 0
+command: {333+00+00}
+
+
+time: 63727763905.810989
+***** Car0 *****
+translation: -886.310757 -971.951608  66.307809
+rotation: -2.619740
+velocity: 4.046004e+02 5.271430e+02
+command: {333+32+42}
+***** Car1 *****
+translation: -1686.105279 2447.543501 815.591103
+rotation: 0.272091
+velocity: 0 0
+command: {333+00+00}
+***** Car2 *****
+translation: -364.852673 -118.896208  59.257229
+rotation: -1.905843
+velocity: 0 0
+command: {333+00+00}
+
+
+time: 63727763905.923004
+***** Car0 *****
+translation: -865.596075 -1035.089524  64.040943
+rotation: -2.527462
+velocity: 3.451987e+02 4.780731e+02
+command: {333+27+38}
+***** Car1 *****
+translation: -1686.122411 2447.574286 815.291933
+rotation: 0.271064
+velocity: 0 0
+command: {333+00+00}
+***** Car2 *****
+translation: -365.093919 -118.776488  58.795779
+rotation: -1.905696
+velocity: 0 0
+command: {333+00+00}
+
+
+time: 63727763906.033997
+***** Car0 *****
+translation: -842.742183 -1085.124447  62.365396
+rotation: -2.469518
+velocity: 2.968755e+02 4.488915e+02
+command: {333+23+35}
+***** Car1 *****
+translation: -1686.051340 2447.701237 815.639975
+rotation: 0.270576
+velocity: 0 0
+command: {333+00+00}
+***** Car2 *****
+translation: -364.837982 -118.891364  59.295992
+rotation: -1.905877
+velocity: 0 0
+command: {333+00+00}
+
+
+time: 63727763906.125000
+***** Car0 *****
+translation: -823.030687 -1118.982039  61.246043
+rotation: -2.399629
+velocity: 2.573458e+02 4.151043e+02
+command: {333+20+33}
+***** Car1 *****
+translation: -1686.098900 2447.547494 815.512731
+rotation: 0.271036
+velocity: 0 0
+command: {333+00+00}
+***** Car2 *****
+translation: -365.091856 -118.776838  58.802804
+rotation: -1.905733
+velocity: 0 0
+command: {333+00+00}
+
+
+time: 63727763906.218994
+***** Car0 *****
+translation: -799.808061 -1151.632219  60.216909
+rotation: -2.310736
+velocity: 2.137257e+02 3.911615e+02
+command: {333+17+31}
+***** Car1 *****
+translation: -1686.096207 2447.491893 815.378457
+rotation: 0.270403
+velocity: 0 0
+command: {333+00+00}
+***** Car2 *****
+translation: -364.807961 -118.864831  59.244076
+rotation: -1.905972
+velocity: 0 0
+command: {333+00+00}
+
+
+time: 63727763906.323997
+***** Car0 *****
+translation: -774.853020 -1177.721667  59.138960
+rotation: -2.209720
+velocity: 1.818737e+02 3.650044e+02
+command: {333+14+29}
+***** Car1 *****
+translation: -1686.114538 2447.472952 815.570946
+rotation: 0.272082
+velocity: 0 0
+command: {333+00+00}
+***** Car2 *****
+translation: -365.085276 -118.789583  58.802615
+rotation: -1.905748
+velocity: 0 0
+command: {333+00+00}
+
+
+time: 63727763906.436005
+***** Car0 *****
+translation: -746.160538 -1200.382536  58.820949
+rotation: -2.082964
+velocity: 1.469070e+02 3.435763e+02
+command: {333+12+27}
+***** Car1 *****
+translation: -1686.137320 2447.459748 815.459962
+rotation: 0.271917
+velocity: 0 0
+command: {333+00+00}
+***** Car2 *****
+translation: -364.812313 -118.864809  59.233291
+rotation: -1.906322
+velocity: 0 0
+command: {333+00+00}
+
+
+time: 63727763906.532990
+***** Car0 *****
+translation: -720.531919 -1214.523427  55.146125
+rotation: -1.975367
+velocity: 1.237787e+02 3.228584e+02
+command: {333+10+25}
+***** Car1 *****
+translation: -1686.103844 2447.523662 815.442132
+rotation: 0.271988
+velocity: 0 0
+command: {333+00+00}
+***** Car2 *****
+translation: -365.079789 -118.780065  58.798748
+rotation: -1.905731
+velocity: 0 0
+command: {333+00+00}
+
+
+time: 63727763906.636002
+***** Car0 *****
+translation: -695.009222 -1224.525064  54.827530
+rotation: -1.854771
+velocity: 9.930271e+01 3.013947e+02
+command: {333+08+24}
+***** Car1 *****
+translation: -1686.069636 2447.796628 815.549331
+rotation: 0.269141
+velocity: 0 0
+command: {333+00+00}
+***** Car2 *****
+translation: -365.075877 -118.781891  58.812689
+rotation: -1.905589
+velocity: 0 0
+command: {333+00+00}
+
+
+time: 63727763906.746010
+***** Car0 *****
+translation: -670.011896 -1231.489870  56.402575
+rotation: -1.652513
+velocity: 9.322650e+01 2.699297e+02
+command: {333+07+21}
+***** Car1 *****
+translation: -1686.093028 2447.611934 815.263997
+rotation: 0.272565
+velocity: 0 0
+command: {333+00+00}
+***** Car2 *****
+translation: -365.080234 -118.777928  58.810660
+rotation: -1.905762
+velocity: 0 0
+command: {333+00+00}
+
+
+time: 63727763906.858002
+***** Car0 *****
+translation: -642.440400 -1233.036299  56.491643
+rotation: -1.503389
+velocity: 7.286650e+01 2.471516e+02
+command: {333+06+19}
+***** Car1 *****
+translation: -1686.069256 2447.562046 815.719158
+rotation: 0.270191
+velocity: 0 0
+command: {333+00+00}
+***** Car2 *****
+translation: -365.078574 -118.782456  58.800053
+rotation: -1.905815
+velocity: 0 0
+command: {333+00+00}
+
+
+time: 63727763906.972000
+***** Car0 *****
+translation: -621.844712 -1230.711026  54.974376
+rotation: -1.377590
+velocity: 6.744385e+01 2.296030e+02
+command: {333+05+18}
+***** Car1 *****
+translation: -1686.058709 2447.749908 815.660546
+rotation: 0.270461
+velocity: 0 0
+command: {333+00+00}
+***** Car2 *****
+translation: -364.837240 -118.880485  59.263098
+rotation: -1.905859
+velocity: 0 0
+command: {333+00+00}
+
+
+time: 63727763907.056000
+***** Car0 *****
+translation: -603.474617 -1225.676612  55.465673
+rotation: -1.260227
+velocity: 6.091232e+01 1.971864e+02
+command: {333+05+16}
+***** Car1 *****
+translation: -1686.089748 2447.693120 815.462858
+rotation: 0.270759
+velocity: 0 0
+command: {333+00+00}
+***** Car2 *****
+translation: -364.815933 -118.877736  59.263581
+rotation: -1.906110
+velocity: 0 0
+command: {333+00+00}
+
+
+time: 63727763907.172005
+***** Car0 *****
+translation: -587.278083 -1217.845742  53.399998
+rotation: -1.169921
+velocity: 0 0
+command: {333+00+00}
+***** Car1 *****
+translation: -1686.048643 2447.650327 815.578064
+rotation: 0.270929
+velocity: 0 0
+command: {333+00+00}
+***** Car2 *****
+translation: -364.823302 -118.893290  59.295538
+rotation: -1.905894
+velocity: 0 0
+command: {333+00+00}
+
+
+time: 63727763907.283005
+***** Car0 *****
+translation: -572.845024 -1210.005332  53.609458
+rotation: -1.066692
+velocity: 0 0
+command: {333+00+00}
+***** Car1 *****
+translation: -1686.122666 2447.560027 815.523615
+rotation: 0.270719
+velocity: 0 0
+command: {333+00+00}
+***** Car2 *****
+translation: -365.096633 -118.772195  58.793715
+rotation: -1.905761
+velocity: 0 0
+command: {333+00+00}
+
+
+time: 63727763907.385002
+***** Car0 *****
+translation: -564.857291 -1206.818805  56.063614
+rotation: -1.005565
+velocity: 0 0
+command: {333+00+00}
+***** Car1 *****
+translation: -1686.111449 2447.592589 815.411928
+rotation: 0.270211
+velocity: 0 0
+command: {333+00+00}
+***** Car2 *****
+translation: -364.828197 -118.892096  59.320019
+rotation: -1.905662
+velocity: 0 0
+command: {333+00+00}
+
+
+time: 63727763907.494995
+***** Car0 *****
+translation: -565.067868 -1206.953841  56.121604
+rotation: -1.006186
+velocity: 0 0
+command: {333+00+00}
+***** Car1 *****
+translation: -1686.166005 2447.459785 815.301133
+rotation: 0.270993
+velocity: 0 0
+command: {333+00+00}
+***** Car2 *****
+translation: -365.073020 -118.777475  58.808513
+rotation: -1.905658
+velocity: 0 0
+command: {333+00+00}
+
+
+time: 63727763907.613007
+***** Car0 *****
+translation: -565.056948 -1206.913152  56.119721
+rotation: -1.006268
+velocity: 0 0
+command: {333+00+00}
+***** Car1 *****
+translation: -1686.091553 2447.544712 815.484013
+rotation: 0.271483
+velocity: 0 0
+command: {333+00+00}
+***** Car2 *****
+translation: -364.804077 -118.884257  59.276456
+rotation: -1.906023
+velocity: 0 0
+command: {333+00+00}
+
+
+time: 63727763907.715004
+***** Car0 *****
+translation: -565.084254 -1206.862425  56.122627
+rotation: -1.006068
+velocity: 0 0
+command: {333+00+00}
+***** Car1 *****
+translation: -1686.118329 2447.631088 815.457302
+rotation: 0.270964
+velocity: 0 0
+command: {333+00+00}
+***** Car2 *****
+translation: -364.795173 -118.872255  59.293910
+rotation: -1.906141
+velocity: 0 0
+command: {333+00+00}
+
+
+time: 63727763907.820007
+***** Car0 *****
+translation: -565.098370 -1206.915097  56.078083
+rotation: -1.006400
+velocity: 0 0
+command: {333+00+00}
+***** Car1 *****
+translation: -1686.044294 2447.755859 815.490553
+rotation: 0.270228
+velocity: 0 0
+command: {333+00+00}
+***** Car2 *****
+translation: -365.084686 -118.789995  58.800253
+rotation: -1.905597
+velocity: 0 0
+command: {333+00+00}
+
+
