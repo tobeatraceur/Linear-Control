@@ -5,6 +5,9 @@ classdef VData < handle
         fig;
         ax;
         history;
+        MAXPOINTS = 200;
+        mousePos;
+        readMouse = false;
     end
 
     methods
@@ -52,59 +55,79 @@ classdef VData < handle
                 Direction.Up );    % Z-up
         end
 
-        function obj = read_data(obj)
+        function ready = read_data(obj)
             % Output format: list of map, each map has these key:
             %'SubjectName', 'SegmentName', 'GlobalTranslation', 'GlobalQuaternion', 'GlobalEuler'
 
-            obj.data = containers.Map;
+            readData= containers.Map;
 
-            % Get a frame
-            while obj.MyClient.GetFrame().Result.Value ~= Result.Success
+            for retry = 1:5
+
+                ready = true;
+
+                % Get a frame
+                while obj.MyClient.GetFrame().Result.Value ~= Result.Success
+                end
+
+                % Count the number of subjects
+                SubjectCount = obj.MyClient.GetSubjectCount().SubjectCount;
+
+                for SubjectIndex = 1:SubjectCount
+
+                    % Get the subject name
+                    SubjectName = obj.MyClient.GetSubjectName( SubjectIndex ).SubjectName;
+
+                    % Count the number of segments
+                    SegmentCount = obj.MyClient.GetSegmentCount( SubjectName ).SegmentCount;
+
+                    for SegmentIndex = 1:SegmentCount
+
+                        segmentData = containers.Map;
+                        segmentData('SubjectName') = SubjectName;
+
+                        % Get the segment name
+                        SegmentName = obj.MyClient.GetSegmentName( SubjectName, SegmentIndex ).SegmentName;
+                        segmentData('SegmentName') = SegmentName;
+
+                        % Get the global segment translation
+                        Output_GetSegmentGlobalTranslation = ...
+                            obj.MyClient.GetSegmentGlobalTranslation( SubjectName, SegmentName );
+                        segmentData('GlobalTranslation') = Output_GetSegmentGlobalTranslation;
+
+                        if segmentData('GlobalTranslation').Occluded ~= 0
+                            ready = false;
+                        end
+
+                        % Get the global segment rotation in quaternion co-ordinates
+                        Output_GetSegmentGlobalRotationQuaternion = ...
+                            obj.MyClient.GetSegmentGlobalRotationQuaternion( SubjectName, SegmentName );
+                        segmentData('GlobalQuaternion') = Output_GetSegmentGlobalRotationQuaternion;
+
+                        % Get the global segment rotation in EulerXYZ co-ordinates
+                        Output_GetSegmentGlobalRotationEulerXYZ = ...
+                            obj.MyClient.GetSegmentGlobalRotationEulerXYZ( SubjectName, SegmentName );
+                        segmentData('GlobalEuler') = Output_GetSegmentGlobalRotationEulerXYZ;
+
+                        readData(segmentData('SegmentName')) = segmentData;
+
+                    end% SegmentIndex
+
+                end% SubjectIndex
+
+                % Update data only when all subjects are included
+                if ready
+                    obj.data = readData;
+                    break;
+                end
+
+            end% All subject read
+
+            if ready
+                % Update history
+                obj.update_history();
+            else
+                warning('Fail to find all subjects! Please check vicon system.')
             end
-
-            % Count the number of subjects
-            SubjectCount = obj.MyClient.GetSubjectCount().SubjectCount;
-
-            for SubjectIndex = 1:SubjectCount
-
-                % Get the subject name
-                SubjectName = obj.MyClient.GetSubjectName( SubjectIndex ).SubjectName;
-
-                % Count the number of segments
-                SegmentCount = obj.MyClient.GetSegmentCount( SubjectName ).SegmentCount;
-
-                for SegmentIndex = 1:SegmentCount
-
-                    segmentData = containers.Map;
-                    segmentData('SubjectName') = SubjectName;
-
-                    % Get the segment name
-                    SegmentName = obj.MyClient.GetSegmentName( SubjectName, SegmentIndex ).SegmentName;
-                    segmentData('SegmentName') = SegmentName;
-
-                    % Get the global segment translation
-                    Output_GetSegmentGlobalTranslation = ...
-                        obj.MyClient.GetSegmentGlobalTranslation( SubjectName, SegmentName );
-                    segmentData('GlobalTranslation') = Output_GetSegmentGlobalTranslation;
-
-                    % Get the global segment rotation in quaternion co-ordinates
-                    Output_GetSegmentGlobalRotationQuaternion = ...
-                        obj.MyClient.GetSegmentGlobalRotationQuaternion( SubjectName, SegmentName );
-                    segmentData('GlobalQuaternion') = Output_GetSegmentGlobalRotationQuaternion;
-
-                    % Get the global segment rotation in EulerXYZ co-ordinates
-                    Output_GetSegmentGlobalRotationEulerXYZ = ...
-                        obj.MyClient.GetSegmentGlobalRotationEulerXYZ( SubjectName, SegmentName );
-                    segmentData('GlobalEuler') = Output_GetSegmentGlobalRotationEulerXYZ;
-
-                    obj.data(segmentData('SegmentName')) = segmentData;
-
-                end% SegmentIndex
-
-            end% SubjectIndex
-
-            % Update history
-            obj.update_history();
         end
 
         function translation = get_translation(obj, name)
@@ -117,7 +140,9 @@ classdef VData < handle
         end
 
         function obstacles = get_obstacles(obj, name)
-            if isKey(obj.data, name)
+            if strcmp(name, 'none') == 1
+                obstacles = [];
+            elseif isKey(obj.data, name)
                 obstacles = [];
                 for k = obj.data.keys()
                     if ~ strcmp(k{1}, name)
@@ -156,12 +181,14 @@ classdef VData < handle
                 object = obj.data(k{1});
                 objectTranlation = object('GlobalTranslation').Translation;
 
-                if ~isKey(obj.history, k{1})
-                    obj.history(k{1}) = [];
+                if object('GlobalTranslation').Occluded == 0
+                    if ~isKey(obj.history, k{1})
+                        obj.history(k{1}) = [];
+                    end
+
+                    obj.history(k{1}) = [obj.history(k{1}); objectTranlation'];
+
                 end
-
-                obj.history(k{1}) = [obj.history(k{1}); objectTranlation'];
-
             end
         end
 
@@ -171,25 +198,43 @@ classdef VData < handle
             hold on;
 
             for k = obj.data.keys()
+                if ~isKey(obj.history, k{1})
+                    continue;
+                end
                 his= obj.history(k{1});
                 x = his(1:end, 1);
                 y = his(1:end, 2);
 
                 % Draw only recent trajectory
-                if length(x) > 200
-                    x = x(end-49 : end);
-                    y = y(end-49 : end);
+                if length(x) > obj.MAXPOINTS
+                    x = x(end-obj.MAXPOINTS+1 : end);
+                    y = y(end-obj.MAXPOINTS+1 : end);
                 end
 
+                if obj.readMouse
+                    plot(obj.ax, obj.mousePos(1), obj.mousePos(2), 'go')
+                end
+                
                 plot(obj.ax, x, y);
                 plot(obj.ax, x(end), y(end), '+');
-                axis([-3000 3000 -3000 3000]);
+%                 rectangle([-1700 -2000 2000 2850]);
+                axis([-2200 1000 -2200 1500]);
             drawnow;
             end
             hold off;
 
         end
 
+        function cp = get_mouse(obj)
+            cp = get(obj.ax, 'CurrentPoint');
+            cp = [cp(1, 1:2), 0];
+            obj.mousePos = cp;
+            if (cp(1) < 300) && (cp(1) > -1700) && (cp(2) < 850) && (cp(2) > -2000)
+                obj.readMouse = true;
+            else
+                obj.readMouse = false;
+            end
+        end
     end
 
 end
