@@ -14,8 +14,8 @@ classdef Controller
         K_w_theta = pi;
         K_r = 1e5;%可调，调优先级高，如果会撞，调大
 		
-        Repulsive_Distance = 500;
-		Predictive_Distance = 400;%可调，抖得很厉害调，很早就抖，就调小
+        Repulsive_Distance = 300;
+		Predictive_Distance = 500;%可调，抖得很厉害调，很早就抖，就调小
         Predictive_Decay = 4;
         alpha_r = 2;
         K_v = 0.7;
@@ -95,7 +95,7 @@ classdef Controller
                     Grad = Grad + obj.K_r * replusive_multiplier * ...
                         [...
                         (obj.Repulsive_Distance / ((obj.x(end)-x_R)^2 + (obj.y(end)-y_R)^2)^(1/2))^(obj.alpha_r) / ((obj.x(end)-x_R)^2 + (obj.y(end)-y_R)^2) * (x_R-obj.x(end)),...
-                        (obj.Repulsive_Distance / ((obj.x(end)-x_R)^2 + (obj.y(end)-y_R)^2)^(1/2))^(obj.alpha_r) / ((obj.x(end)-x_R)^2 + (obj.y(end)-y_R)^2) * (x_R-obj.y(end))...
+                        (obj.Repulsive_Distance / ((obj.x(end)-x_R)^2 + (obj.y(end)-y_R)^2)^(1/2))^(obj.alpha_r) / ((obj.x(end)-x_R)^2 + (obj.y(end)-y_R)^2) * (y_R-obj.y(end))...
                         ];
                     %                    end
                 end

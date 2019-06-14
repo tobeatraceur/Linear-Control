@@ -5,7 +5,7 @@ addpath(genpath('./include/'));
 % Start Vicon client
 vicon = VData();
 disp('Vicon online.');
-
+pause(20);
 % Initialize cars
 
 try
@@ -35,18 +35,6 @@ catch
     fprintf('Done\n');
 end
 
-%% Generate path
-for i = 1:100
-    vicon.read_data();
-end
-start_point = vicon.get_translation('car0');
-path_y = 0:10:1000;
-path_x = -600 * sin(path_y(:) / 2000 * 2 * pi);
-path_y = path_y + start_point(2);
-path_x = path_x + start_point(1);
-index = 1;
-
-
 %% Control
 % Initialize contoller
 controllerCar0 = Controller(thetaFixCar0);
@@ -60,7 +48,7 @@ carName = {'car0', 'car1', 'car2'};
 carThetaFix = [thetaFixCar0, thetaFixCar1, thetaFixCar2];
 
 %Initialization
-
+vicon.read_data();
 filterAlpha = 0.4;
 headIndex = 1;
 finalPosition = vicon.get_translation(carName{1});
@@ -120,10 +108,10 @@ while(headIndex<=size(carList, 2))
             else
                 carList(i) = carList(i).set_MAX_SPEED(40);
             end
-            if reachTarget
-                vl = 0;
-                vr = 0;
-            end
+%             if reachTarget
+%                 vl = 0;
+%                 vr = 0;
+%             end
             carList(i).set_speed([vl, vr]);
             
             
@@ -163,8 +151,90 @@ car0.stop();car1.stop();car2.stop();
 pause(1);
 car0.stop();car1.stop();car2.stop();
 
-disp('please click');
+
 %%
+%turn to triangle
+while ishandle( MessageBox )
+    % Read data
+    tic;
+    vicon.read_data();
+    vicon.update_trajectory();
+    
+    targetPos = vicon.get_translation('car2')';
+    [vl2, vr2, reachTarget, controllerCar2] = controllerCar2.update( ...
+        vicon.get_translation('car2'), ...
+        vicon.get_rotation('car2'), ...
+        targetPos , ...
+        vicon.get_rotation('car2') + thetaFixCar2, ...
+        vicon.get_obstacles('car2'));
+    
+    targetPosition = vicon.get_translation('car2') + [-400; -450; 0];
+    
+    [vl1, vr1, reachTarget1, controllerCar1] = controllerCar1.update( ...
+        vicon.get_translation('car1'), ...
+        vicon.get_rotation('car1'), ...
+        targetPosition, ...
+        vicon.get_rotation('car2') + carThetaFix(3), ...
+        vicon.get_obstacles('car1'));
+    
+    if reachTarget1
+        v1l = 0;
+        vr1 = 0;
+        disp('car1 reach!');
+    end
+    
+    targetPosition = vicon.get_translation('car2') + [400; -450; 0];
+    
+    [vl0, vr0, reachTarget0, controllerCar0] = controllerCar0.update(...
+        vicon.get_translation('car0'), ...
+        vicon.get_rotation('car0'), ...
+        targetPosition, ...
+        vicon.get_rotation('car2') + carThetaFix(3), ...
+        vicon.get_obstacles('car0'));
+    if reachTarget0
+        vl0 = 0;
+        vr0 = 0;
+        disp('car0 reach!');
+    end
+    
+    if reachTarget1 && reachTarget0
+        disp('turn o triangle');
+        break;
+    end
+    
+    
+    commandCar0 = car0.set_speed([vl0, vr0]);
+    commandCar1 = car1.set_speed([vl1, vr1]);
+    commandCar2 = car2.set_speed([vl2, vr2]);
+    
+    runTime = toc;
+    if runTime < 0.1
+        pause(0.1 - runTime)
+    else
+        warning('Slow loop!')
+    end
+    
+end
+
+car0.stop();car1.stop();car2.stop();
+pause(1);
+car0.stop();car1.stop();car2.stop();
+
+disp('please click');
+
+%% Generate path
+for i = 1:100
+    vicon.read_data();
+end
+start_point = vicon.get_translation('car2');
+path_y = 0:15:3000;
+path_x = 600 * sin(path_y(:) / 2000 * 2 * pi);
+path_y = path_y + start_point(2);
+path_x = path_x + start_point(1);
+index = 1;
+
+car0.set_MAX_SPEED(50);car1.set_MAX_SPEED(50);car2.set_MAX_SPEED(50);
+
 while ishandle( MessageBox ) && ishandle(vicon.fig)
     % Read data
     tic;
@@ -178,8 +248,8 @@ while ishandle( MessageBox ) && ishandle(vicon.fig)
     targetPos = vicon.get_mouse()
     if ~vicon.readMouse
         targetPos = [path_x(index), path_y(index), 0];
-%         targetPos = vicon.get_translation('car2')';
     end
+%     targetPos = vicon.get_translation('car2')';
     
     [vl2, vr2, reachTarget, controllerCar2] = controllerCar2.update( ...
         vicon.get_translation('car2'), ...
@@ -188,10 +258,10 @@ while ishandle( MessageBox ) && ishandle(vicon.fig)
         vicon.get_rotation('car2') + thetaFixCar2, ...
         vicon.get_obstacles('car2'));
     
-%     if reachTarget
-%         vl2 = 0;
-%         vr2 = 0;
-%     end
+    %     if reachTarget
+    %         vl2 = 0;
+    %         vr2 = 0;
+    %     end
     
     targetThetaDesire = vicon.get_rotation('car2') + carThetaFix(3);
     thetaDelta = round((carLastTheta(2) - targetThetaDesire) / (2 * pi)) * 2 * pi + targetThetaDesire - carLastTheta(2)
@@ -200,7 +270,7 @@ while ishandle( MessageBox ) && ishandle(vicon.fig)
     thetaMatrix = [cos(targetTheta), -sin(targetTheta), 0;
         sin(targetTheta), cos(targetTheta), 0;
         0, 0, 1];
-    targetPosition = vicon.get_translation('car2') + [-400; 450; 0];
+    targetPosition = vicon.get_translation('car2') + [-400; -450; 0];
     carLastTheta(2) = targetTheta;
     
     [vl1, vr1, reachTarget, controllerCar1] = controllerCar1.update( ...
@@ -210,10 +280,10 @@ while ishandle( MessageBox ) && ishandle(vicon.fig)
         targetTheta, ...
         vicon.get_obstacles('car1'));
     
-%     if reachTarget
-%         vl1 = 0;
-%         vr1 = 0;
-%     end
+    %     if reachTarget
+    %         vl1 = 0;
+    %         vr1 = 0;
+    %     end
     
     targetThetaDesire = vicon.get_rotation('car2') + carThetaFix(3);
     thetaDelta = round((carLastTheta(1) - targetThetaDesire) / (2 * pi)) * 2 * pi + targetThetaDesire - carLastTheta(1)
@@ -222,7 +292,7 @@ while ishandle( MessageBox ) && ishandle(vicon.fig)
     thetaMatrix = [cos(targetTheta), -sin(targetTheta), 0;
         sin(targetTheta), cos(targetTheta), 0;
         0, 0, 1];
-    targetPosition = vicon.get_translation('car2') + [-400; -450; 0];
+    targetPosition = vicon.get_translation('car2') + [400; -450; 0];
     carLastTheta(1) = targetTheta;
     
     [vl0, vr0, reachTarget, controllerCar0] = controllerCar0.update(...
@@ -232,10 +302,10 @@ while ishandle( MessageBox ) && ishandle(vicon.fig)
         targetTheta, ...
         vicon.get_obstacles('car0'));
     
-%     if reachTarget
-%         vl0 = 0;
-%         vr0 = 0;
-%     end
+    %     if reachTarget
+    %         vl0 = 0;
+    %         vr0 = 0;
+    %     end
     index = index + 1;
     
     commandCar0 = car0.set_speed([vl0, vr0]);

@@ -5,7 +5,7 @@ classdef VData < handle
         fig;
         ax;
         history;
-        MAXPOINTS = 200;
+        MAXPOINTS = 300;
         mousePos;
         readMouse = false;
     end
@@ -196,7 +196,7 @@ classdef VData < handle
 
             cla(obj.ax);
             hold on;
-
+            
             for k = obj.data.keys()
                 if ~isKey(obj.history, k{1})
                     continue;

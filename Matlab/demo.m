@@ -8,14 +8,15 @@ vicon = VData();
 disp('Vicon online.');
 
 % Open file
-filename = 'sin1';
+filename = 'mouse01';
 dateString = strsplit(char(datetime));
-outputFile = fopen(['../ViconData/19-06-13/', filename, '.txt'], 'w');
+outputFile = fopen(['../ViconData/19-06-14/', filename, '.txt'], 'w');
 
 % Log experiment time
 fprintf(outputFile, 'Log time: %s\n\n', char(datetime()));
 
-Initialize cars
+% Initialize cars
+
 try
     car0.stop();
 catch
@@ -80,11 +81,13 @@ while ishandle( MessageBox ) && ishandle(vicon.fig)
         index = length(path_x);
     end
 
+    % mouse track
     targetPos = vicon.get_mouse();
     if ~vicon.readMouse        
         targetPos = vicon.get_translation('car0')';
     end
-    targetPos = [path_x(index), path_y(index), 0];
+    
+%     targetPos = [path_x(index), path_y(index), 0];
 %     targetPos = [-600 -500 0];
 %     targetTheta = 0;
 
@@ -92,14 +95,9 @@ while ishandle( MessageBox ) && ishandle(vicon.fig)
         vicon.get_translation('car0'), ...
         vicon.get_rotation('car0'), ...
         targetPos , ...
-        vicon.get_rotation('car0') + thetaFixCar0, ...
-        vicon.get_obstacles('none'));
-%     [vl0, vr0, ~, controllerCar0] = controllerCar0.update( ...
-%         vicon.get_translation('car0'), ...
-%         vicon.get_rotation('car0'), ...
-%         targetPos , ...
-%         targetTheta, ...
-%         vicon.get_obstacles('car0'));
+        vicon.get_rotation('car1') + thetaFixCar1, ...
+        vicon.get_obstacles('car0'));
+
     index = index + 1;
     
     [vl1, vr1, ~, controllerCar1] = controllerCar1.update( ...
@@ -118,8 +116,8 @@ while ishandle( MessageBox ) && ishandle(vicon.fig)
     index = index + 1;
     
 %    vl0 = 0; vr0 = 0;
-%    vl1 = 0; vr1 = 0;
-%    vl2 = 0; vr2 = 0;
+   vl1 = 0; vr1 = 0;
+   vl2 = 0; vr2 = 0;
     
     commandCar0 = car0.set_speed([vl0, vr0]);
     commandCar1 = car1.set_speed([vl1, vr1]);
