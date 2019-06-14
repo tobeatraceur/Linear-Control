@@ -1,53 +1,15 @@
 # Linear-Control
 
-- Matlab control and monitor in * Matlab\ *
-- Matlab stimulation in * Stimulation\ *
-- Controlling related programs in * VehicleControl\ * (to be removed)
-- Data collected in * ViconData\ *
-- [Tsinghua Cloud link (click me)](https://cloud.tsinghua.edu.cn/#group/9575/)
+- 控制程序 * Matlab/ *
+- Matlab 仿真见 * Simulation/ *
+- 实测数据见 * ViconData/ *
 
-### TODO 05-29
+本项目将 Vicon 系统（用于定位）、蓝牙小车进行了封装，并在此基础上定义了位置信息、小车、控制器三个对象，为两轮小车控制系统的测试与开发提供了简单易用的平台。
 
-* [ ] PID参数使跟随车响应变快
-* [ ] 避障算法给出
-* [x] 减小AB:5B:C3（手控）的速度
-* [ ] 两车跟一车
-  * [ ] 先不管刚体（三角形）约束
-  * [ ] 之后调出来
-* [x] matlab代码重构
-* [ ] 记录真实数据，与仿真对比 
-* [ ] 下周可能展示
-   * [ ] 视频
-   * [ ] 算法公式
-   * [ ] 6中的仿真
+用于获取位置信息的对象定义在 *Matlab/VData.m*。
 
-### TODO 05-22
+用于控制小车蓝牙连接及车轮转速的对象定义在 * Matlab/Car.m * 。
 
-* [x] 结合文献实现单个小车跟随
-* [ ] 结合文献实现小车碰撞避免（多车问题）
-* [x] 解决控制中产生的误差（速度离散，滞后）
-* [ ] 对VICON输出的滤波
-* 蓝牙
-    * [x] 蓝牙控制并测速
-    * [x] 蓝牙的多连接测试
+接收被控对象位置、目标位置、障碍物位置，计算出被控对象两车轮转速的对象定义在 * Matlab/Controller.m * 。
 
-
-### TODO 05-15
-
-* [x] **05-15展示**
-  * [x] 选题背景
-  * [x] 简单的建模
-  * [x] 遇到的问题：（非线性问题，非完整约束等等）
-  * [x] 文献中的控制策略
-  * [x] 实际操作：小车标定，有误差，对控制的影响下周分析
-  * [x] 下周目标
-* [x] 设定场景 
- * 无人机编队伪装
-* [x] 数学定义
-* [ ] 单车仿真
-  * [x] 单点到单点控制
-  * [ ] 单点到单点--鲁棒控制
-  * [ ] 跟踪控制器
-* [x] 系统输入输出接口
-  * [x] 车辆实测结果
-* [ ] 文献综述
+![系统结构](https://raw.githubusercontent.com/tobeatraceur/Linear-Control/master/Presentation/Resources/SystemStructure.jpg)
