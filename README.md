@@ -8,8 +8,8 @@
 
 用于获取位置信息的对象定义在 *Matlab/VData.m*。
 
-用于控制小车蓝牙连接及车轮转速的对象定义在 * Matlab/Car.m * 。
+用于控制小车蓝牙连接及车轮转速的对象定义在 *Matlab/Car.m* 。
 
-接收被控对象位置、目标位置、障碍物位置，计算出被控对象两车轮转速的对象定义在 * Matlab/Controller.m * 。
+接收被控对象位置、目标位置、障碍物位置，计算出被控对象两车轮转速的对象定义在 *Matlab/Controller.m* 。
 
 ![系统结构](https://raw.githubusercontent.com/tobeatraceur/Linear-Control/master/Presentation/Resources/SystemStructure.jpg)
