@@ -12,4 +12,6 @@
 
 接收被控对象位置、目标位置、障碍物位置，计算出被控对象两车轮转速的对象定义在 *Matlab/Controller.m* 。
 
+平台基础功能介绍见 *小车控制系统文档.pdf*
+
 ![系统结构](https://raw.githubusercontent.com/tobeatraceur/Linear-Control/master/Presentation/Resources/SystemStructure.jpg)
