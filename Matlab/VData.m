@@ -181,14 +181,12 @@ classdef VData < handle
                 object = obj.data(k{1});
                 objectTranlation = object('GlobalTranslation').Translation;
 
-                if object('GlobalTranslation').Occluded == 0
-                    if ~isKey(obj.history, k{1})
-                        obj.history(k{1}) = [];
-                    end
-
-                    obj.history(k{1}) = [obj.history(k{1}); objectTranlation'];
-
+                if ~isKey(obj.history, k{1})
+                    obj.history(k{1}) = [];
                 end
+
+                obj.history(k{1}) = [obj.history(k{1}); objectTranlation'];
+
             end
         end
 
@@ -217,7 +215,6 @@ classdef VData < handle
                 
                 plot(obj.ax, x, y);
                 plot(obj.ax, x(end), y(end), '+');
-%                 rectangle([-1700 -2000 2000 2850]);
                 axis([-2200 1000 -2200 1500]);
             drawnow;
             end

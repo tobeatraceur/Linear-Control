@@ -2,7 +2,6 @@ classdef Car
 
     properties
         bluetooth;
-        angleFixNum = 50;
         MAX_SPEED = 50;
         SPEED_FIX = 12.7;
     end
@@ -15,14 +14,14 @@ classdef Car
         end
 
 		function obj = set_MAX_SPEED(obj, newMAX_SPEED)
-			%set the max speed for the snake
+			% Set max speed
 			obj.MAX_SPEED = newMAX_SPEED;
 		end
 		
         function thetaFix = get_angle(obj, vicon, nameString)
             obj.set_speed([80, 80]);
 
-            for i = 1: obj.angleFixNum
+            for i = 1: 50
                 vicon.read_data();
 
                 trans = vicon.get_translation(nameString);
@@ -43,11 +42,9 @@ classdef Car
         function command = set_speed(obj, speed)
             speed = speed / obj.SPEED_FIX;
             if(sum(speed.^2) > 2 * obj.MAX_SPEED^2)
-%                 disp('speed too high!!');
                 speed = speed * sqrt (2 * obj.MAX_SPEED^2 / sum(speed.^2));
             end
             command = sprintf('{333%+03d%+03d}', round(speed));
-            % disp(['command: ', command]);
             fprintf(obj.bluetooth, command);
         end
         

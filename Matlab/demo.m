@@ -34,7 +34,7 @@ catch
     thetaFixCar1 = car1.get_angle(vicon, 'car1');
     fprintf('Done\n');
 end
-    
+
 try
     car2.stop();
 catch
@@ -48,18 +48,6 @@ fprintf(outputFile, 'Theta fix car0: %f\n', thetaFixCar0);
 fprintf(outputFile, 'Theta fix car1: %f\n', thetaFixCar1);
 fprintf(outputFile, 'Theta fix car2: %f\n', thetaFixCar2);
 fprintf(outputFile, '\n\n');
-
-
-%% Generate path
-for i = 1:100
-    vicon.read_data();
-end
-start_point = vicon.get_translation('car0');
-path_y = 0:10:1000;
-path_x = -600 * sin(path_y(:) / 2000 * 2 * pi);
-path_y = path_y + start_point(2);
-path_x = path_x + start_point(1);
-index = 1;
 
 
 %% Control
@@ -77,19 +65,11 @@ while ishandle( MessageBox ) && ishandle(vicon.fig)
     vicon.read_data();
     vicon.update_trajectory();
 
-    if index > length(path_x)
-        index = length(path_x);
-    end
-
     % mouse track
     targetPos = vicon.get_mouse();
     if ~vicon.readMouse        
         targetPos = vicon.get_translation('car0')';
     end
-    
-%     targetPos = [path_x(index), path_y(index), 0];
-%     targetPos = [-600 -500 0];
-%     targetTheta = 0;
 
     [vl0, vr0, ~, controllerCar0] = controllerCar0.update( ...
         vicon.get_translation('car0'), ...
@@ -98,8 +78,6 @@ while ishandle( MessageBox ) && ishandle(vicon.fig)
         vicon.get_rotation('car1') + thetaFixCar1, ...
         vicon.get_obstacles('car0'));
 
-    index = index + 1;
-    
     [vl1, vr1, ~, controllerCar1] = controllerCar1.update( ...
         vicon.get_translation('car1'), ...
         vicon.get_rotation('car1'), ...
@@ -113,33 +91,28 @@ while ishandle( MessageBox ) && ishandle(vicon.fig)
         vicon.get_translation('car0') + [200; -250; 0], ...
         vicon.get_rotation('car0') + thetaFixCar0, ...
         vicon.get_obstacles('none'));
-    index = index + 1;
-    
-%    vl0 = 0; vr0 = 0;
-   vl1 = 0; vr1 = 0;
-   vl2 = 0; vr2 = 0;
-    
+
     commandCar0 = car0.set_speed([vl0, vr0]);
     commandCar1 = car1.set_speed([vl1, vr1]);
     commandCar2 = car2.set_speed([vl2, vr2]);
 
     % Write data to file
     fprintf(outputFile, 'time: %.6f\n', now*60*60*24);    
-    
+
     fprintf(outputFile, '***** Car0 *****\n');
     fprintf(outputFile, 'translation: %10.6f %10.6f %10.6f\n', ...
         vicon.get_translation('car0'));
     fprintf(outputFile, 'rotation: %f\n', vicon.get_rotation('car0'));
     fprintf(outputFile, 'velocity: %d %d\n', vl0, vr0);
     fprintf(outputFile, 'command: %s\n', commandCar0);
-    
+
     fprintf(outputFile, '***** Car1 *****\n');
     fprintf(outputFile, 'translation: %10.6f %10.6f %10.6f\n', ...
         vicon.get_translation('car1'));
     fprintf(outputFile, 'rotation: %f\n', vicon.get_rotation('car1'));
     fprintf(outputFile, 'velocity: %d %d\n', vl1, vr1);
     fprintf(outputFile, 'command: %s\n', commandCar1);
-    
+
     fprintf(outputFile, '***** Car2 *****\n');
     fprintf(outputFile, 'translation: %10.6f %10.6f %10.6f\n', ...
         vicon.get_translation('car2'));
@@ -148,7 +121,7 @@ while ishandle( MessageBox ) && ishandle(vicon.fig)
     fprintf(outputFile, 'command: %s\n', commandCar2);
 
     fprintf(outputFile, '\n\n');
-    
+
 	runTime = toc;
 	if runTime < 0.1
 		pause(0.1 - runTime)
